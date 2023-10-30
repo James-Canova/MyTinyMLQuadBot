@@ -3,7 +3,7 @@
 //11 September 2023
 //James Canova
 
-//last updated 7 October 2023
+//last updated 30 October 2023
 
 //reads output of low pass filter (0v...3.3v) on analog pin  (0..)
 //and displays on OLED 

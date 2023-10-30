@@ -1,25 +1,19 @@
-# 1 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/Test_sketch_V0a/Test_sketch_V0a.ino"
-//Test_sketch_V0a.ino
+# 1 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/Test_sketch_V2a/Test_sketch_V2a.ino"
+//Test_sketch_V2a.ino
 
+# 4 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/Test_sketch_V2a/Test_sketch_V2a.ino" 2
 
-# 5 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/Test_sketch_V0a/Test_sketch_V0a.ino" 2
-
-
-# 8 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/Test_sketch_V0a/Test_sketch_V0a.ino" 2
-
-Adafruit_PWMServoDriver m_PWM;
+ServoSG90 m_Servo;
 
 void setup()
 {
-
- m_PWM.begin();
- m_PWM.setOscillatorFrequency(OSCILLATOR_FREQ);
- m_PWM.setPWMFreq(SERVO_FREQ);
-
-
+    int nServoNumber = 8;
+ m_Servo.Initialize(nServoNumber, true);
 }
 
-
 void loop() {
+
+    float fDegrees = -30.0;
+    m_Servo.SetServoAngleInServoFrameDeg(fDegrees);
 
 }

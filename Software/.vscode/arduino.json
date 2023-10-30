@@ -1,6 +1,6 @@
 {
     "board": "arduino:mbed_nano:nano33ble",
-    "sketch": "Test_sketch_V0a/Test_sketch_V0a.ino",
+    "sketch": "Test_sketch_V2a/Test_sketch_V2a.ino",
     "port": "/dev/ttyACM0",
     "output": "./Output",
     "programmer": "cmsis-dap"

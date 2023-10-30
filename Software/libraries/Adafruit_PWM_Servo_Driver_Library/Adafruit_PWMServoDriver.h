@@ -23,7 +23,7 @@
 #ifndef _ADAFRUIT_PWMServoDriver_H
 #define _ADAFRUIT_PWMServoDriver_H
 
-#include <Adafruit_I2CDevice.h>
+#include "../../libraries/Adafruit_BusIO/Adafruit_I2CDevice.h"
 #include <Arduino.h>
 
 // REGISTER ADDRESSES

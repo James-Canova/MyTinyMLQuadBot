@@ -2,6 +2,8 @@
 
 //#define DEBUG_SERIAL Serial
 
+#include "../../libraries/Adafruit_BusIO/Adafruit_I2CDevice.h"
+
 /*!
  *    @brief  Create an I2C device at a given address
  *    @param  addr The 7-bit I2C address for the device

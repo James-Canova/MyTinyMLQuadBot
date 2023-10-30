@@ -1,0 +1,82 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/home/james/.arduino15/packages/arduino/hardware/mbed_nano/4.0.8/cores/arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/home/james/.arduino15/packages/arduino/hardware/mbed_nano/4.0.8/variants/ARDUINO_NANO33BLE"
+  },
+  {
+    "Sourcefile": "/home/james/Public/Projects/MyTinyMLQuadBot/Software/Output/sketch/Test_sketch_V2a.ino.cpp",
+    "Include": "ServoSG90.h",
+    "Includepath": "/home/james/Arduino/libraries/Robot_Library/src"
+  },
+  {
+    "Sourcefile": "/home/james/Public/Projects/MyTinyMLQuadBot/Software/Output/sketch/Test_sketch_V2a.ino.cpp",
+    "Include": "Adafruit_PWMServoDriver.h",
+    "Includepath": "/home/james/Arduino/libraries/Adafruit_PWM_Servo_Driver_Library"
+  },
+  {
+    "Sourcefile": "/home/james/Public/Projects/MyTinyMLQuadBot/Software/Output/sketch/Test_sketch_V2a.ino.cpp",
+    "Include": "Adafruit_I2CDevice.h",
+    "Includepath": "/home/james/Arduino/libraries/Adafruit_BusIO"
+  },
+  {
+    "Sourcefile": "/home/james/Public/Projects/MyTinyMLQuadBot/Software/Output/sketch/Test_sketch_V2a.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "/home/james/.arduino15/packages/arduino/hardware/mbed_nano/4.0.8/libraries/Wire"
+  },
+  {
+    "Sourcefile": "/home/james/Public/Projects/MyTinyMLQuadBot/Software/Output/sketch/Test_sketch_V2a.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/james/Arduino/libraries/Robot_Library/src/PointXY.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/james/Arduino/libraries/Robot_Library/src/ServoSG90.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/james/Arduino/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/james/Arduino/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp",
+    "Include": "SPI.h",
+    "Includepath": "/home/james/.arduino15/packages/arduino/hardware/mbed_nano/4.0.8/libraries/SPI"
+  },
+  {
+    "Sourcefile": "/home/james/Arduino/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/james/Arduino/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/james/Arduino/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/james/.arduino15/packages/arduino/hardware/mbed_nano/4.0.8/libraries/Wire/Wire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/james/.arduino15/packages/arduino/hardware/mbed_nano/4.0.8/libraries/SPI/SPI.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]

@@ -24,6 +24,7 @@ const float MAX_MAG_SERVO_DEG_LOWER_LEG  = 30.0;
 //used in class: Link,Leg and Quadraped in Stand function--------
 const float UPPER_LEG_LENGTH_MM = 40.0;
 const float LOWER_LEG_LENGTH_MM = 33.0;
+const float NECK_LENGTH_MM = 0.0;
 
 
 //used in class: ServoSG90---------------------------------------------------

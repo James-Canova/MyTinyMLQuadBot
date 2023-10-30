@@ -27,7 +27,7 @@
  *  BSD license, all text above must be included in any redistribution
  */
 
-#include "Adafruit_PWMServoDriver.h"
+#include "../../libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h"
 
 //#define ENABLE_DEBUG_OUTPUT
 

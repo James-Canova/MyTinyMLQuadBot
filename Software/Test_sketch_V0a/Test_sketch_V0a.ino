@@ -1,23 +1,13 @@
 //Test_sketch_V0a.ino
 
+#include "PointXY.h"
 
-#include "../../libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h"
-
-
-#include "Constants.h"
-
-Adafruit_PWMServoDriver m_PWM;
+PointXY m_xyPoint;
 
 void setup()
 {
-
-	m_PWM.begin();
-	m_PWM.setOscillatorFrequency(OSCILLATOR_FREQ);
-	m_PWM.setPWMFreq(SERVO_FREQ); 
-
-
+	m_xyPoint.SetValues(0.0, 1.0);
 }
-
 
 void loop() {
 
