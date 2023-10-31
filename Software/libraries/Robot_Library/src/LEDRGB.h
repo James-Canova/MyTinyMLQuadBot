@@ -3,40 +3,23 @@
 #ifndef LEDRGB_h 
 #define LEDRGB_h
 
+#include <Arduino.h>
 #include "Constants.h"
-
-
 
 class LEDRGB
 {
-public:
+	public:
 
-	void  SetValues(float fX, float fY);
-	float GetX();	
-	float GetY();		
+		void Initialize();	
+		void AllLedsOff();
+		void LedOn(int nPin);
 
-private:
-    float m_fX;  
-    float m_fY;
+	private:
+		const int nDigitalWriteBit0Pin = 21; // loc 26
+		const int nDigitalWriteBit1Pin = 20; // loc 25
+		const int nDigitalWriteBit2Pin = 16; // loc 21	
+
 };
 
 #endif
 
-
-/*
-
-
-
-pinMode(RED, OUTPUT);
-pinMode(BLUE, OUTPUT);
-pinMode(GREEN, OUTPUT);
-
-
-
-
-AllLedsOff();
-
-
-LedOn(BLUE);
-
-*/

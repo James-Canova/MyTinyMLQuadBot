@@ -1,6 +1,6 @@
 {
     "board": "arduino:mbed_nano:nano33ble",
-    "sketch": "MotionCommands/MotionCommands.ino",
+    "sketch": "Test_sketch_V0a/Test_sketch_V0a.ino",
     "port": "/dev/ttyACM0",
     "output": "./Output",
     "programmer": "cmsis-dap"

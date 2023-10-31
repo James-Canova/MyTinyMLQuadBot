@@ -1,35 +1,56 @@
-// MotionCommands.ino
+//MotionCommands.ino
 
-// James Canova, jscanova@gmail.com
-// last updated: 31 October 2023
-// Working on walking using new statically stable crawl gait and adding Walk class
-
-#include "MotionControlsInterface.h"
-#include "States.h"
 #include "LEDRGB.h"
-#include "Constants.h"
+#include "States.h"
+#include "PointXY.h"
+
+#include "ProcessCommand.h"
+
+LEDRGB m_ledRGB;
+
+int m_nStateIndex;
+String m_strState;
+
+PointXY m_xyCentroid;
+
+float m_xCentroid;
 
 
-int nDelay = 500;
-LEDRGB ledRGB;
+//arrStates[8] = {"Reset", "Ready", "Sit", "Walk", "Pause","None", "None", "None"};
 
-
-
-// Setup---------------------------------
 void setup()
 {
-  Serial.begin(9600);
-  delay(nDelay);
+	m_ledRGB.Initialize();
+	m_ledRGB.AllLedsOff();
+
+	m_nStateIndex = 0; //Reset
+
+	m_xyCentroid.SetValues(0.0, 0.0);
+	
 }
 
-// Main loop--------------------------
-void loop()
-{
+void loop() {
+	
+	m_ledRGB.AllLedsOff();
+	delay(500);
+
+	//controlled according to state diagram-----
+	m_strState = arrStates[m_nStateIndex];
+
+	//from object detection------
+	m_xyCentroid.SetValues(20.0, 0.0);
+	m_xCentroid = m_xyCentroid.GetX();
 
 
-  
-
-} // end of main loop
+	//Write state and xCentroid;
 
 
 
+
+
+
+
+	m_ledRGB.LedOn(BLUE);
+	delay(500);
+
+}

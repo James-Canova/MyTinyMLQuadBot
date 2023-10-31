@@ -2,25 +2,30 @@
 
 #include "LEDRGB.h"
 
-void  LEDRGB::SetValues(float fX, float fY)
+void  LEDRGB::Initialize()
 {
-	m_fX = fX;  
-	m_fY = fY;		
+	pinMode(RED, OUTPUT);
+	pinMode(BLUE, OUTPUT);
+	pinMode(GREEN, OUTPUT);
+
+	pinMode(nDigitalWriteBit0Pin, OUTPUT);
+	pinMode(nDigitalWriteBit1Pin, OUTPUT);
+	pinMode(nDigitalWriteBit2Pin, OUTPUT);	
 }
 
 
-float LEDRGB::GetX()
-{	
-	return m_fX;
-}
-
-float LEDRGB::GetY()
-{	
-	return m_fY;
+void  LEDRGB::AllLedsOff()
+{
+	digitalWrite(RED, HIGH);
+	digitalWrite(GREEN, HIGH);
+	digitalWrite(BLUE, HIGH);
 }
 
 
-
+void LEDRGB::LedOn(int nPin)
+{
+	digitalWrite(nPin, LOW);
+}
 
 
 

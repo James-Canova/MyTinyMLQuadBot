@@ -1,3 +1,3 @@
 //States.h
 
-String arrStates[8] = {"Reset", "Ready", "Sit", "Crawl", "Pause","None", "None", "None"};
+String arrStates[8] = {"Reset", "Ready", "Sit", "Walk", "Pause","None", "None", "None"};
