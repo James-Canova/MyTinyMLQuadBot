@@ -7,14 +7,14 @@ Link m_Link;
 
 void setup()
 {
-NECK_LENGTH_MM
     int nServoNumber = 8;
-	m_Servo.Initialize(nServoNumber, true);
+    float fLength = NECK_LENGTH_MM;
+    bool bAxisAligned = true; 
 
+    m_Link.Initialize(nServoNumber, fLength, bAxisAligned);
 
-		void Initialize(int nServoNumber, float fLength, bool bAxisAligned);
-
-		void SetAngleInLegFrame(float fAngleDeg);
+    float fAngleDeg = 30.0;
+	m_Link.SetAngleInLegFrame(fAngleDeg);
 				    
 }
 

@@ -4,8 +4,6 @@
 #define Link_h
 
 #include "ServoSG90.h"
-//#include "Constants.h"
-
 
 class Link
 {
