@@ -35,6 +35,11 @@
     "Includepath": null
   },
   {
+    "Sourcefile": "/home/james/Arduino/libraries/Robot_Library/src/MotionCommandsInterface.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
     "Sourcefile": "/home/james/Arduino/libraries/Robot_Library/src/PointXY.cpp",
     "Include": "",
     "Includepath": null
