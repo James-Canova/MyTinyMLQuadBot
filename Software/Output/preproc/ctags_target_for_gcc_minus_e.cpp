@@ -1,19 +1,32 @@
-# 1 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/Test_sketch_V2a/Test_sketch_V2a.ino"
-//Test_sketch_V2a.ino
+# 1 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino"
+// MotionCommands.ino
 
-# 4 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/Test_sketch_V2a/Test_sketch_V2a.ino" 2
+// James Canova, jscanova@gmail.com
+// last updated: 31 October 2023
+// Working on walking using new statically stable crawl gait and adding Walk class
 
-ServoSG90 m_Servo;
+# 8 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino" 2
+# 9 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino" 2
+# 10 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino" 2
 
+
+int nDelay = 500;
+LEDRGB ledRGB;
+
+
+
+// Setup---------------------------------
 void setup()
 {
-    int nServoNumber = 8;
- m_Servo.Initialize(nServoNumber, true);
+  Serial.begin(9600);
+  delay(nDelay);
 }
 
-void loop() {
+// Main loop--------------------------
+void loop()
+{
 
-    float fDegrees = -30.0;
-    m_Servo.SetServoAngleInServoFrameDeg(fDegrees);
 
-}
+
+
+} // end of main loop

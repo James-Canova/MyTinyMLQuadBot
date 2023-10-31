@@ -1,5 +1,17 @@
 //Constants.h
 
+//used in class ....
+const int RED = 22; 
+const int BLUE = 24;
+const int GREEN = 23;
+
+//#define RED 22
+//#define BLUE 24
+//#define GREEN 23
+
+//used in class ....
+const int IMAGE_WIDTH_PIXELS = 96;
+
 
 //used in class: Path---------------------------------------------------
 const float MAX_STRIDE_MM = 30.0;

@@ -1,8 +1,8 @@
-//MotionControlsInterface.cpp
+//Display.cpp
 
-#include "MotionControlsInterface.h"
+#include "Display.h"
 
-void  MotionControlssInterface::ReadValue()
+void  Display::ReadValue()
 {
 	int a;
 	a = 1;	

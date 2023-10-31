@@ -3,17 +3,7 @@
 //11 September 2023
 //James Canova
 
-//last updated 30 October 2023
-
-//reads output of low pass filter (0v...3.3v) on analog pin  (0..)
-//and displays on OLED 
-
-const int nAnalogReadPin = 15;         //D15/A1
-
-const int nDigitalReadBit0Pin = 7;
-const int nDigitalReadBit1Pin = 8;
-const int nDigitalReadBit2Pin = 9;
-
+//last updated 31 October 2023
 
 
 #include "MotionContolsInterface.h"
@@ -70,26 +60,14 @@ void loop() {
 
   String strOut;
 
-  int nBit0;
-  int nBit1;
-  int nBit2;
-  int arrBit[3];
-
+  
   AllLedsOff();
   delay(500);
 
   LedOn(GREEN);
   delay(500);  
 
-  nBit0 = digitalRead(nDigitalReadBit0Pin);   
-  nBit1 = digitalRead(nDigitalReadBit1Pin);
-  nBit2 = digitalRead(nDigitalReadBit2Pin); 
-
-  arrBit[0] = nBit0;
-  arrBit[1] = nBit1; 
-  arrBit[2] = nBit2;
-  
-  strOut = BitsToSting(arrBit);
+ 
 
   
   // nCommand = 3;
@@ -162,17 +140,6 @@ void LedOn(int nPin)
 }
 
 
-String BitsToSting(int* arrBits)
-{
-  String strState;
-  int nIndex;
-
-  nIndex = 4 * arrBits[2] + 2 * arrBits[1] + arrBits[0];
-
-  strState = arrStates[nIndex];
-
-  return strState;
-}
 
 
 
