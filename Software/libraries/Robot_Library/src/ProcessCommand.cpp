@@ -3,19 +3,20 @@
 #include "ProcessCommand.h"
 
 
+void ProcessCommand::Initialize()
+{
+
+
+
+}
+
 //Write -----------------------------------------
 void ProcessCommand::WriteXCentroid(float fX)
 {
-	//m_PWMpin( digitalPinToPinName( m_nPWMpin ) );  
-   
-    //const int m_nPWM_FREQUENCY = 500; //Hz, 500 is default
-    //m_nPWMpin.period( 1.0 / nPWM_FREQUENCY );   //must be in seconds
 
-	float fDutyCycle;
+	float fDutyCycle  = fX;  //0->1, 0V-3.3V
 
-	fDutyCycle  = 0.9;  //0->1, 0V-3.3V
-
-	//m_nPWMpin.write(fDutyCycle);
+	m_pwmPin.write(fDutyCycle);
 
 }
 

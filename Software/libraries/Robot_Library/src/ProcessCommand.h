@@ -4,17 +4,20 @@
 #define ProcessCommand_h
 
 #include <Arduino.h>
-#include <mbed.h>
+#include "mbed.h"
 
 class ProcessCommand
 {
   public:
+
+    void Initialize();
 
     //for writing from Arduino 1 
     void WriteState(int nState);
     void WriteXCentroid(float fX);
 
 
+#include "PointXY.h"
     //for reading by Arduino 2
     void  ReadState();
     void  ReadXCentroid();
@@ -27,12 +30,21 @@ class ProcessCommand
     const int m_nDigitalWriteBit2Pin = 16; // loc 21 
     int m_arrStateBits[3];
 
-    //for writing x centroid
-    const	int m_nPWMpin = 10;         //~D10
-		//mbed::PwmOut m_PWMpin;
-    mbed::PwmOut pwmPin( digitalPinToPinName( nPWMpin ) );    
+    void StateToBits(String strState, int *m_arrStateBits);
+
+
+    //for writing offset (through pwm pin)
+	  const int nPWMpin = 10;         //~D10
+    const int nPWM_FREQUENCY = 500; //Hz, 500 is default, I think max is 31KHz
+  	mbed::PwmOut m_pwmPin( digitalPinToPinName( nPWMpin ) );
+
+
+
+
 
 	  float m_fDutyCycle;
+
+
 
 
 };
