@@ -1,7 +1,7 @@
 /home/james/Public/Projects/MyTinyMLQuadBot/Software/Output/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp.o: \
  /home/james/Arduino/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.cpp \
- /home/james/Arduino/libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h \
- /home/james/Arduino/libraries/Adafruit_BusIO/Adafruit_I2CDevice.h \
+ /home/james/Arduino/libraries/Adafruit_PWM_Servo_Driver_Library/../../libraries/Adafruit_PWM_Servo_Driver_Library/Adafruit_PWMServoDriver.h \
+ /home/james/Arduino/libraries/Adafruit_PWM_Servo_Driver_Library/../../libraries/Adafruit_PWM_Servo_Driver_Library/../../libraries/Adafruit_BusIO/Adafruit_I2CDevice.h \
  /home/james/.arduino15/packages/arduino/hardware/mbed_nano/4.0.8/cores/arduino/Arduino.h \
  /home/james/.arduino15/packages/arduino/hardware/mbed_nano/4.0.8/variants/ARDUINO_NANO33BLE/pinmode_arduino.h \
  /home/james/.arduino15/packages/arduino/hardware/mbed_nano/4.0.8/variants/ARDUINO_NANO33BLE/mbed_config.h \
