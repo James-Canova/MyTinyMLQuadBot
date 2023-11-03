@@ -1,13 +1,13 @@
 //MotionCommands.ino
 
 
-#include "ObjDetPH.h"
+#include "MotionCommandWriteUtility.h"
 #include "mbed.h"
 #include "Constants.h"
 #include "Arduino.h"
 #include "States.h"
 
-ObjDetPH aObjDet;
+MotionCommandWriteUtility aObjDet;
 
 mbed::PwmOut m_pwmPin( digitalPinToPinName( nPWM_PIN ) );
 
@@ -29,7 +29,7 @@ void setup() {
 
 void loop() {
 
-  //Read centroid from ObjDetPH
+  //Read centroid from MotionCommandWriteUtility
   float fXCentroid;
   fXCentroid = aObjDet.GetXCentroid();
 

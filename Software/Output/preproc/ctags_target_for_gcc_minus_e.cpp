@@ -1,11 +1,12 @@
 # 1 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionControls/MotionControls.ino"
 //MotionControls.ino
 
-//#include ObjDetPH;
+# 4 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionControls/MotionControls.ino" 2
 
-# 6 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionControls/MotionControls.ino" 2
+
 # 7 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionControls/MotionControls.ino" 2
 # 8 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionControls/MotionControls.ino" 2
+# 9 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionControls/MotionControls.ino" 2
 
 #define SCREEN_WIDTH 128 /* OLED display width, in pixels*/
 #define SCREEN_HEIGHT 32 /* OLED display height, in pixels*/
@@ -15,11 +16,14 @@
 #define SCREEN_ADDRESS 0x3C /*|< See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32*/
 Adafruit_SSD1306 display(128 /* OLED display width, in pixels*/, 32 /* OLED display height, in pixels*/, &Wire, 4 /* Reset pin # (or -1 if sharing Arduino reset pin)*/);
 
+
+
 float m_fXCentroid, m_fOldXCentroid;
 String m_strState, m_strOldState;
 
 void setup(){
   Serial.begin(9600);
+
 
   // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
   if(!display.begin(0x02 /*|< Gen. display voltage from 3.3V*/, 0x3C /*|< See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32*/)) {
@@ -36,6 +40,7 @@ void setup(){
   display.clearDisplay();
   display.display();
   delay(2000);
+
 
   m_fXCentroid = -99.0;
   m_fOldXCentroid = -99.0;
@@ -61,9 +66,12 @@ void loop() {
   m_strOldState = m_strState;
 
 
+  //write X centroid and state to pins----
+  WriteState(m_strState);
+  WriteXCentroid(m_fXCentroid);
+
+
   //put state switch case here------
-
-
 
 
   delay(200);
@@ -106,5 +114,26 @@ void DrawToOLED(String m_strState, float m_fXCentroid)
   display.println(strOut);
 
   display.display();
+
+}
+
+
+///////////////////////////////////////////////////////////////
+//Functions: For MotionCommandsInterface (but temporarily here
+// becuase of mbed problem
+//makes use of MotionCommandWriteUtility which would normally
+//be connected to MotionCommandsInterface
+///////////////////////////////////////////////////////////////
+
+void WriteState(String strState)
+{
+  MotionCommandWriteUtility aMCWUtility;
+
+}
+
+
+void WriteXCentroid(float m_fXCentroid)
+{
+  MotionCommandWriteUtility aMCWUtility;
 
 }
