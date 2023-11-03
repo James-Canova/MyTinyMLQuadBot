@@ -1,123 +1,110 @@
-# 1 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino"
-//MotionCommands.ino
+# 1 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionControls/MotionControls.ino"
+//MotionControls.ino
 
+//#include ObjDetPH;
 
-# 5 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino" 2
-# 6 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino" 2
-# 7 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino" 2
-# 8 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino" 2
-# 9 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino" 2
+# 6 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionControls/MotionControls.ino" 2
+# 7 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionControls/MotionControls.ino" 2
+# 8 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionControls/MotionControls.ino" 2
 
-ObjDetPH aObjDet;
+#define SCREEN_WIDTH 128 /* OLED display width, in pixels*/
+#define SCREEN_HEIGHT 32 /* OLED display height, in pixels*/
 
-mbed::PwmOut m_pwmPin( digitalPinToPinName( nPWM_PIN ) );
+// Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
+#define OLED_RESET 4 /* Reset pin # (or -1 if sharing Arduino reset pin)*/
+#define SCREEN_ADDRESS 0x3C /*|< See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32*/
+Adafruit_SSD1306 display(128 /* OLED display width, in pixels*/, 32 /* OLED display height, in pixels*/, &Wire, 4 /* Reset pin # (or -1 if sharing Arduino reset pin)*/);
 
-String m_strState;
+float m_fXCentroid, m_fOldXCentroid;
+String m_strState, m_strOldState;
 
+void setup(){
+  Serial.begin(9600);
 
-void setup() {
+  // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
+  if(!display.begin(0x02 /*|< Gen. display voltage from 3.3V*/, 0x3C /*|< See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32*/)) {
+    Serial.println((reinterpret_cast<const __FlashStringHelper *>(("SSD1306 allocation failed"))));
+    for(;;); // Don't proceed, loop forever
+  }
 
-  m_strState = "Reset";
+  // Show initial display buffer contents on the screen --
+  // the library initializes this with an Adafruit splash screen.
+  display.display();
+  delay(2000); // Pause for 2 seconds
 
-  m_pwmPin.period( 1.0 / nPWM_FREQUENCY ); //seconds
+  // Clear the buffer
+  display.clearDisplay();
+  display.display();
+  delay(2000);
 
-  pinMode(nDIGITAL_OUTPUT_PIN_0, OUTPUT); //D7, most significant value
-  pinMode(nDIGITAL_OUTPUT_PIN_1, OUTPUT);
-  pinMode(nDIGITAL_OUTPUT_PIN_2, OUTPUT);
+  m_fXCentroid = -99.0;
+  m_fOldXCentroid = -99.0;
+  m_strState = "none";
+  m_strOldState = "none";
 
 }
 
 
 void loop() {
 
-  //Read centroid from ObjDetPH
-  float fXCentroid;
-  fXCentroid = aObjDet.GetXCentroid();
+  //read state and x centroid---
+  m_strState = "Reset";
+  m_fXCentroid = 0.55;
+  //reading state and x centroid complete---
 
-
-  //Write Data for reading by Arduino 2
-  WriteData(m_strState, fXCentroid);
-
-}
-
-
-
-//------------------------------------------------------------------
-//Functions---------------------------------------------------------
-//Write functions will go in ProcessCommand when I figure
-//out how to use mbed  outside of a .ino
-
-
-
-//WriteData-----
-void WriteData(String strState, float fXCentroid)
-{
-  WriteState(strState);
-  WriteXCentroid(fXCentroid);
-}
-
-
-
-//WriteState-----
-void WriteState(String strState)
-{
-  int nDigitalWriteValue0; //most significant bit
-  int nDigitalWriteValue1;
-  int nDigitalWriteValue2;
-
-  //find index of strState in arrSTATES
-  int nIndex;
-  nIndex = FindIndex(arrSTATES, strState);
-
-
-
-  nDigitalWriteValue0 = 0;
-  nDigitalWriteValue1 = 1;
-  nDigitalWriteValue2 = 0;
-
-  digitalWrite(nDIGITAL_OUTPUT_PIN_0, nDigitalWriteValue0);
-  digitalWrite(nDIGITAL_OUTPUT_PIN_1, nDigitalWriteValue1);
-  digitalWrite(nDIGITAL_OUTPUT_PIN_2, nDigitalWriteValue2);
-}
-
-
-
-
-//WriteXCentroid-----
-void WriteXCentroid(float fXCentroid)
-{
-    float fDutyCycle;
-
-    m_pwmPin.write(fDutyCycle);
-}
-
-
-
-//FindIndex-----
-int FindIndex(String strState)
-{
-  int nIndex;
-  nIndex = -1;
-
-  int n = sizeof(arrSTATES) / sizeof(arrSTATES[0]);
-
-  for(int i=0;i<n;i++)
+  if ( (m_strOldState != m_strState) || (m_fOldXCentroid != m_fXCentroid))
   {
-      if(arrSTATES[i] == strState)
-      {
-          //If current value is equal to our element
-          //then replace the index value and break the loop
-          nIndex = i;
-          break;
-      }
+    DrawToOLED(m_strState, m_fXCentroid);
   }
-  return nIndex;
+
+  m_fOldXCentroid = m_fXCentroid;
+  m_strOldState = m_strState;
+
+
+  //put state switch case here------
+
+
+
+
+  delay(200);
+
+
 }
 
 
-void ConvertIntToBinary(int nIndex,int &nBit2,int &nBit1,int &nBit0)
+
+///////////////////////////////////////////////////////////////
+//Functions: OLED
+///////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////
+void DrawToOLED(String m_strState, float m_fXCentroid)
 {
-  nBit2 = 1;
-  nBit1 = 1;
-  nBit0 = 1;
+
+  String strOut;
+
+  int nYFirstLine = 4;
+  int nYSecondLine = 16;
+  int nTextSize = 1;
+
+  display.clearDisplay();
+
+  display.setTextSize(nTextSize); // Normal 1:1 pixel scale
+  display.setTextColor(1 /*|< Draw 'on' pixels*/); // Draw white text
+
+  //print first line which is the state---
+  display.setCursor(0,nYFirstLine);
+  strOut = "State: ";
+  strOut = strOut + m_strState;
+  display.println(strOut);
+
+
+  //print second line which is the X centroid---
+  display.setCursor(0,nYSecondLine);
+  strOut = "X Centroid: ";
+  strOut = strOut + String(m_fXCentroid,2);
+  display.println(strOut);
+
+  display.display();
+
 }

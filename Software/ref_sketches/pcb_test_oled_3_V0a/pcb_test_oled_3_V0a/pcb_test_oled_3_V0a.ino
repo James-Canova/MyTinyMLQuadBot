@@ -61,7 +61,7 @@ void setup() {
 
 void loop() {
 
-  float fValue = 10.0;
+  float fValue = 100.0;
   testDrawValue(fValue);
   testdrawline(0,((display.height()-1)/2),display.width()-1, ((display.height()-1)/2)); 
 

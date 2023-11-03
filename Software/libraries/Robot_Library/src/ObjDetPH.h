@@ -7,10 +7,10 @@ class ObjDetPH
 {
 public:
 
-	float GetX();	
+	float GetXCentroid();	
 	
 private:
-    float m_fX;  
+    float m_fXCentroid;  
  
 };
 

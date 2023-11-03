@@ -66,7 +66,7 @@ void WriteState(String strState)
 
   //find index of strState in arrSTATES
   int nIndex;
-  nIndex = FindIndex(arrSTATES, strState);
+  //nIndex = FindIndex(arrSTATES, strState);
 
 
   
