@@ -7,11 +7,11 @@ class MotionControlsInterface
 {
 public:
 
-	void  ReadValue();
+	int  ReadState();
+	int	 ReadXCentroid();	
 
 private:
-    float m_fX;  
-    float m_fY;
+ 
 };
 
 #endif

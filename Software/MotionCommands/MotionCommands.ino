@@ -7,7 +7,7 @@
 #include "Arduino.h"
 #include "States.h"
 
-MotionCommandWriteUtility aObjDet;
+MotionCommandWriteUtility aWriteUtility;
 
 mbed::PwmOut m_pwmPin( digitalPinToPinName( nPWM_PIN ) );
 
@@ -29,7 +29,7 @@ void setup() {
 
 void loop() {
 
-  //Read centroid from MotionCommandWriteUtility
+ 
   float fXCentroid;
   fXCentroid = aObjDet.GetXCentroid();
 
@@ -41,14 +41,10 @@ void loop() {
 
 
 
-//------------------------------------------------------------------
-//Functions---------------------------------------------------------
-//Write functions will go in ProcessCommand when I figure
-//out how to use mbed  outside of a .ino
-
-
-
-//WriteData-----
+/////////////////////////////////////////////////////////
+// Functions for writing state and centroid
+// (here until can move mbed to MotionCommandsInterface)
+/////////////////////////////////////////////////////////
 void WriteData(String strState, float fXCentroid)
 {
   WriteState(strState); 

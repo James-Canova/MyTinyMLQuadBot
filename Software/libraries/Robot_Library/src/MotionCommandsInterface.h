@@ -3,17 +3,20 @@
 #ifndef MotionCommandsInterface_h 
 #define MotionCommandsInterface_h
 
-//#include "ProcessCommand.h"
+//#include "MotionCommandWriteUtility.h"
+#include "States.h"
+#include <Arduino.h>
+
 
 class MotionCommandsInterface
 {
 public:
 
-	void  WriteValue();
-	
+	void  WriteState(String strState);
+	void  WriteXCentroid(int nXCentorid);	
 
 private:
-    float m_fX;  
+ 
 };
 
 #endif

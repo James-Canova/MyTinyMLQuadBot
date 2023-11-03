@@ -2,10 +2,14 @@
 
 #include "MotionCommandsInterface.h"
 
-void  MotionCommandsInterface::WriteValue()
+void  MotionCommandsInterface::WriteState(String strState)
 {
-	int a;
-	a = 1;	
+	//convert to byte then convert to bits and write to pins
+}
+
+void  MotionCommandsInterface::WriteXCentroid(int nXCentorid)
+{
+	//write 0->1 value to pwm pin ~D10
 }
 
 

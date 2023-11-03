@@ -26,7 +26,7 @@ public:
 
 private:
 
-      Adafruit_SSD1306 display;
+  Adafruit_SSD1306 display;
 };
 
 #endif

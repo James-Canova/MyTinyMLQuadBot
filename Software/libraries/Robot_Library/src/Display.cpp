@@ -4,9 +4,11 @@
 
 void  Display::Initialize()
 {
-  Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+
 	display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS);
-	display.clearDisplay();
+  Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+	
+  display.clearDisplay();
   display.display();
 }
 
