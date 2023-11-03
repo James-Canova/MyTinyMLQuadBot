@@ -9,8 +9,7 @@ class MotionCommandWriteUtility
 {
 public:
 
-	void WriteXCentroid(float fXCentorid);	
-	void WriteState(String strState);	  
+ 
 
  
 };

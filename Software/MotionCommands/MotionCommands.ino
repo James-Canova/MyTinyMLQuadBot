@@ -9,10 +9,12 @@
 
 MotionCommandWriteUtility aWriteUtility;
 
+//const int nPWMpin = 10;         //~D10
+//const int nPWM_FREQUENCY = 500; //Hz, 500 is default, I think max is 31KHz
+
 mbed::PwmOut m_pwmPin( digitalPinToPinName( nPWM_PIN ) );
 
 String m_strState;
-
 
 void setup() {
 
@@ -20,7 +22,7 @@ void setup() {
 
   m_pwmPin.period( 1.0 / nPWM_FREQUENCY );   //seconds
 
-  pinMode(nDIGITAL_OUTPUT_PIN_0, OUTPUT); //D7, most significant value
+  pinMode(nDIGITAL_OUTPUT_PIN_0, OUTPUT); //D7, LSB
   pinMode(nDIGITAL_OUTPUT_PIN_1, OUTPUT);
   pinMode(nDIGITAL_OUTPUT_PIN_2, OUTPUT);
 
@@ -29,13 +31,17 @@ void setup() {
 
 void loop() {
 
- 
+  //read from Edge Impulse
   float fXCentroid;
-  fXCentroid = aObjDet.GetXCentroid();
+  fXCentroid = 0.55;
 
+  //set according to state diagram (Draftsight)
+  m_strState = "Reset";
 
   //Write Data for reading by Arduino 2
   WriteData(m_strState, fXCentroid);
+
+  //state case switch goes here---
 
 }  
 
@@ -52,20 +58,20 @@ void WriteData(String strState, float fXCentroid)
 }
 
 
-
-//WriteState-----
+/////////////////////////////////////////////////////////
+//WriteState
 void WriteState(String strState)
 {
-  int nDigitalWriteValue0;  //most significant bit
+  int nDigitalWriteValue0;  //LSB
   int nDigitalWriteValue1;
   int nDigitalWriteValue2;
 
   //find index of strState in arrSTATES
   int nIndex;
-  //nIndex = FindIndex(arrSTATES, strState);
-
-
   
+  nIndex = FindIndex(strState);
+
+
   nDigitalWriteValue0 = 0;
   nDigitalWriteValue1 = 1;
   nDigitalWriteValue2 = 0;
@@ -77,13 +83,20 @@ void WriteState(String strState)
 
 
 
-
-//WriteXCentroid-----
+/////////////////////////////////////////////////////////
+//WriteXCentroid
 void WriteXCentroid(float fXCentroid)
 {
-    float fDutyCycle;
 
-    m_pwmPin.write(fDutyCycle);
+  float fDutyCycle;
+  fDutyCycle = fXCentroid;
+
+  //const int m_nPWM_FREQUENCY = 500; //Hz, 500 is default
+  //m_nPWMpin.period( 1.0 / nPWM_FREQUENCY );   //must be in seconds
+
+	fDutyCycle = fXCentroid;  //0->1, 0V-3.3V
+
+  m_pwmPin.write(fDutyCycle);
 }
 
 
