@@ -297,7 +297,7 @@
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 90d13aeb-c01b-41ca-a650-e3db362fb446)
     )
-    (fp_text value "SMD-2_3P2X1P7_ONS" (at 0.2286 4.6228 unlocked) (layer "F.Fab") hide
+    (fp_text value "QTLP650D4TR" (at 0.2286 4.6228 unlocked) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 363cd1c4-149f-454e-91f4-473ccc27a054)
     )
@@ -465,7 +465,7 @@
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp cd87c5b1-747e-4fd8-81c7-d0f51f8f1e03)
     )
-    (fp_text value "CAP_CL32_SAM" (at 0.2032 9.525 -90 unlocked) (layer "F.Fab") hide
+    (fp_text value "CL32A106KAULNNE" (at 0.2032 9.525 -90 unlocked) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 01d7291d-9916-4cec-8520-0248ecb22498)
     )
@@ -527,7 +527,7 @@
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp f6bdb1f3-ae5f-424e-9b53-471aee52c527)
     )
-    (fp_text value "CAPC3325X127N" (at 0.2286 2.3876 -90) (layer "F.Fab") hide
+    (fp_text value "12102C104KAT2A" (at 0.2286 2.3876 -90) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp cf03a518-280a-4dd3-8098-1c9dd6fc8ef6)
     )
@@ -610,7 +610,7 @@
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp a4678f7e-6d43-49fb-9d6f-01c2da764b54)
     )
-    (fp_text value "CAPC3325X127N" (at 0.2286 2.3876 -90) (layer "F.Fab") hide
+    (fp_text value "12102C104KAT2A" (at 0.2286 2.3876 -90) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 3563e303-e27f-4858-8fd0-51f1a12c68b5)
     )
@@ -646,7 +646,7 @@
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 2e515bfd-f5d2-407e-b140-acbcda69573b)
     )
-    (fp_text value "CAP_CL32_SAM" (at 0 6.858 -90 unlocked) (layer "F.Fab") hide
+    (fp_text value "CL32B475KBUYNNE" (at 0 6.858 -90 unlocked) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp e4d8d540-8c06-4965-9c68-460b4f17f912)
     )
@@ -810,7 +810,7 @@
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 24f70504-fcf0-42b7-ad77-6115f7aa0a54)
     )
-    (fp_text value "SOD123_DIO" (at -0.5 2.75 -90 unlocked) (layer "F.Fab") hide
+    (fp_text value "BZT52C3V3-7-F" (at -0.5 2.75 -90 unlocked) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 381a3ac3-32d0-4f49-a3a1-4c7abc0abdf2)
     )
@@ -1035,7 +1035,7 @@
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 046a6cf1-f531-4d76-aead-7e36e9981ef7)
     )
-    (fp_text value "SW4_TL3305CF260QG_EWI" (at -0.1016 5.588 unlocked) (layer "F.Fab") hide
+    (fp_text value "TL3305CF260QG" (at -0.1016 5.588 unlocked) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 01e75bc9-9903-4025-855a-ac2942cc143c)
     )
@@ -1210,7 +1210,7 @@
     (pad "20" thru_hole oval (at 15.24 25.4 180) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask)
       (net 41 "HREF") (pinfunction "D15/A1") (pintype "bidirectional") (tstamp a0b49dd5-7aee-47ec-93d3-5f0985e890fd))
     (pad "21" thru_hole oval (at 15.24 22.86 180) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask)
-      (net 21 "bit_2") (pinfunction "D16/A2") (pintype "bidirectional") (tstamp d66e3a6a-f3d4-46bd-9356-9bd194fd1a84))
+      (net 19 "bit_0") (pinfunction "D16/A2") (pintype "bidirectional") (tstamp d66e3a6a-f3d4-46bd-9356-9bd194fd1a84))
     (pad "22" thru_hole oval (at 15.24 20.32 180) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask)
       (net 32 "PB") (pinfunction "D17/A3") (pintype "bidirectional") (tstamp 691173a0-f3a2-46fb-8cff-441d4e58d377))
     (pad "23" thru_hole oval (at 15.24 17.78 180) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask)
@@ -1220,7 +1220,7 @@
     (pad "25" thru_hole oval (at 15.24 12.7 180) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask)
       (net 20 "bit_1") (pinfunction "D20/A6") (pintype "bidirectional") (tstamp c8dc36af-5cd3-4231-9d14-48e2b74b6231))
     (pad "26" thru_hole oval (at 15.24 10.16 180) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask)
-      (net 19 "bit_0") (pinfunction "D21/A7") (pintype "bidirectional") (tstamp d602b1c6-bdba-4c46-b75c-947320a3ec52))
+      (net 21 "bit_2") (pinfunction "D21/A7") (pintype "bidirectional") (tstamp d602b1c6-bdba-4c46-b75c-947320a3ec52))
     (pad "27" thru_hole oval (at 15.24 7.62 180) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask)
       (net 53 "unconnected-(A1-Pad27)") (pinfunction "+5V") (pintype "power_out+no_connect") (tstamp 241d5ae4-861d-4bac-b4c2-34f2a8e3590c))
     (pad "28" thru_hole oval (at 15.24 5.08 180) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask)
@@ -1248,7 +1248,7 @@
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 52a88b0c-b236-41bb-805c-a8f31f89457d)
     )
-    (fp_text value "SMD-2_3P2X1P7_ONS" (at 0.2286 4.6228 180 unlocked) (layer "F.Fab") hide
+    (fp_text value "QTLP650D4TR" (at 0.2286 4.6228 180 unlocked) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 91292ec3-a04d-40b9-897a-342435b5acc5)
     )
@@ -1437,7 +1437,7 @@
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp fee4c57f-680b-465a-99a0-14886579dc2e)
     )
-    (fp_text value "MOLEX_533750410" (at -3.048 10.4394 -90) (layer "F.Fab") hide
+    (fp_text value "533750410" (at -3.048 10.4394 -90) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp b1a3738a-5366-4550-a24c-754ffbe70ee3)
     )
@@ -1514,7 +1514,7 @@
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 24d2c082-1f03-4a5d-a989-3f9674985caa)
     )
-    (fp_text value "Slider_switch_500SSP1S2M2QEA" (at 0 8.128 180) (layer "F.Fab") hide
+    (fp_text value "500SSP1S2M2QEA" (at 0 8.128 180) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 6c12e8ae-1151-4b21-8feb-a08a01d30f8d)
     )
@@ -1558,7 +1558,7 @@
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 58e9bedd-d664-454a-9b65-3bf9f5b25c4d)
     )
-    (fp_text value "CAPC3216X94N" (at 0.2032 2.3368 -90) (layer "F.Fab") hide
+    (fp_text value "12065C503JAT2A" (at 0.2032 2.3368 -90) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 8e3bfb8b-59e9-4c88-b699-707799dc3bec)
     )
@@ -1659,7 +1659,7 @@
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 1371f5e0-d108-4d96-993b-897becd73ae2)
     )
-    (fp_text value "TO252-3_ROM" (at 0.1016 11.9634 unlocked) (layer "F.Fab") hide
+    (fp_text value "BD450M5FP-CE2" (at 0.1016 11.9634 unlocked) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp 52f40de8-3db3-44d4-a12e-ef6ea4595efe)
     )
@@ -1747,7 +1747,7 @@
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp dec2e39f-9401-4511-98f9-558e1baead84)
     )
-    (fp_text value "DO-41_DIO" (at 5.238 -3.42125 unlocked) (layer "F.Fab") hide
+    (fp_text value "1N4007G-T" (at 5.238 -3.42125 unlocked) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.2)))
       (tstamp bb6b3381-c4ad-4fab-b2e0-b87e3ec76017)
     )
@@ -1942,6 +1942,8 @@
   (segment (start 174.1989 114.9132) (end 171.5398 114.9132) (width 0.25) (layer "F.Cu") (net 37) (tstamp 06b43dd1-3304-4a58-92d0-c59445a192eb))
   (segment (start 102.3648 93.2882) (end 102.3648 93.1382) (width 0.25) (layer "F.Cu") (net 37) (tstamp 08101838-3d86-47b8-a0d6-8d7de7f38fe4))
   (segment (start 144.0876 117.8965) (end 144.0876 120.011) (width 0.25) (layer "F.Cu") (net 37) (tstamp 13cc9d72-04ca-4750-9d98-37850454491c))
+  (segment (start 118.3876 69.1132) (end 118.3876 73.5334) (width 0.25) (layer "F.Cu") (net 37) (tstamp 2a70091b-2b2a-43e6-80c8-2399bef769c8))
+  (segment (start 118.3876 73.5334) (end 115.1078 76.8132) (width 0.25) (layer "F.Cu") (net 37) (tstamp 4c499f5f-f7ac-404e-a81a-0dc2456d45fd))
   (segment (start 106.854799 68.038191) (end 114.416991 68.038191) (width 0.25) (layer "F.Cu") (net 37) (tstamp 6f2c2afb-b168-417a-94df-6f15c76805fb))
   (segment (start 121.8769 93.1382) (end 123.9119 95.1732) (width 0.25) (layer "F.Cu") (net 37) (tstamp 7165b33f-0d4a-459e-92ab-c2591437d21b))
   (segment (start 100.4898 95.1632) (end 102.3648 93.2882) (width 0.25) (layer "F.Cu") (net 37) (tstamp a28fca01-868e-4812-88f7-fad647c02709))
@@ -1966,9 +1968,7 @@
   (segment (start 137.4398 109.2632) (end 139.0398 109.2632) (width 0.25) (layer "F.Cu") (net 40) (tstamp 0152f4dd-8103-4863-91ad-45ce952cf55b))
   (segment (start 144.6398 99.263197) (end 146.6148 97.288197) (width 0.25) (layer "F.Cu") (net 40) (tstamp 0eea7357-3837-4a7d-a850-5f302f5412c0))
   (segment (start 144.6398 100.2632) (end 144.4398 100.4632) (width 0.25) (layer "F.Cu") (net 40) (tstamp 297a54b3-f550-4be1-9d08-4623decf520c))
-  (segment (start 118.3876 69.1132) (end 118.3876 73.5334) (width 0.25) (layer "F.Cu") (net 40) (tstamp 2a70091b-2b2a-43e6-80c8-2399bef769c8))
   (segment (start 139.0398 109.2632) (end 141.7398 106.5632) (width 0.25) (layer "F.Cu") (net 40) (tstamp 48760520-05c0-443f-b3cd-24190f48fc35))
-  (segment (start 118.3876 73.5334) (end 115.1078 76.8132) (width 0.25) (layer "F.Cu") (net 40) (tstamp 4c499f5f-f7ac-404e-a81a-0dc2456d45fd))
   (segment (start 141.192 117.7632) (end 141.192 117.8965) (width 0.25) (layer "F.Cu") (net 40) (tstamp 4f30e53e-a9ff-404e-8a3f-35f7762b14f4))
   (segment (start 140.666426 111.855826) (end 141.3238 112.5132) (width 0.25) (layer "F.Cu") (net 40) (tstamp 5ce4fb65-871a-4831-8346-78be85863423))
   (segment (start 149.839799 94.004749) (end 149.839799 95.563198) (width 0.25) (layer "F.Cu") (net 40) (tstamp 6110d33c-3db7-48d7-904e-dcbdad0118ee))
@@ -1994,8 +1994,6 @@
   (segment (start 116.4898 84.9732) (end 118.1798 84.9732) (width 0.25) (layer "In1.Cu") (net 40) (tstamp 2a07cdef-6ee1-48c7-a9c2-fe871fd2b94f))
   (segment (start 119.71105 57.53445) (end 118.5778 57.53445) (width 0.25) (layer "In1.Cu") (net 40) (tstamp 33ffbf2c-5f92-4492-ad9b-a25dc8735b74))
   (segment (start 127.5898 109.7132) (end 127.5898 114.110226) (width 0.25) (layer "In1.Cu") (net 40) (tstamp 3c99a424-dd04-48ad-b275-3f343ccd5f82))
-  (segment (start 117.242764 108.46319) (end 122.8898 114.110226) (width 0.25) (layer "In1.Cu") (net 40) (tstamp 568e5d9d-35ee-411d-91e8-c2d2dad234e1))
-  (segment (start 106.979799 108.46319) (end 117.242764 108.46319) (width 0.25) (layer "In1.Cu") (net 40) (tstamp 62df79d0-385b-4192-89aa-7adbb9eb4e0e))
   (segment (start 127.5898 109.7132) (end 116.4898 98.6132) (width 0.25) (layer "In1.Cu") (net 40) (tstamp 63481878-e83b-490e-a95d-7c18732c15fd))
   (segment (start 107.4018 63.991189) (end 106.854799 64.53819) (width 0.25) (layer "In1.Cu") (net 40) (tstamp 905650a9-3048-4cb3-bc08-d57ec7451577))
   (segment (start 132.4642 114.110226) (end 135.2898 116.935826) (width 0.25) (layer "In1.Cu") (net 40) (tstamp c22a83f4-ccb4-46b0-a069-36ab06fb9db4))
@@ -2007,5 +2005,7 @@
   (segment (start 154.439801 94.004749) (end 154.439801 96.513199) (width 0.25) (layer "F.Cu") (net 59) (tstamp 0e4e3506-066b-491e-908f-9085dec7160e))
   (segment (start 155.5148 96.513199) (end 156.4898 97.488199) (width 0.25) (layer "F.Cu") (net 59) (tstamp 48e12b6d-f9ce-4313-a0e0-680d1530c6a5))
   (segment (start 154.439801 96.513199) (end 155.5148 96.513199) (width 0.25) (layer "F.Cu") (net 59) (tstamp c5a5c8a6-d643-4aa0-80dc-6a70a76e9a4b))
+  (segment (start 117.242764 108.46319) (end 122.8898 114.110226) (width 0.25) (layer "In1.Cu") (net 61) (tstamp 568e5d9d-35ee-411d-91e8-c2d2dad234e1))
+  (segment (start 106.979799 108.46319) (end 117.242764 108.46319) (width 0.25) (layer "In1.Cu") (net 61) (tstamp 62df79d0-385b-4192-89aa-7adbb9eb4e0e))
 
 )
