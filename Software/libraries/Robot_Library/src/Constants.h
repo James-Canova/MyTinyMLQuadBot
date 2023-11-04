@@ -1,5 +1,23 @@
 //Constants.h
 
+//used in MotionCommands.ino to generate pwm signal to send Arduino 2
+const int nPWM_PIN = 10;         //~D10
+const int nPWM_FREQUENCY = 500; //Hz, 500 is default, I think max is 31KHz
+
+//used in MotionCommands.ino to send state to send Arduino 2
+const int nDIGITAL_OUTPUT_PIN_0 = 16;   //LSB
+const int nDIGITAL_OUTPUT_PIN_1 = 20;   
+const int nDIGITAL_OUTPUT_PIN_2 = 21;   
+
+//used in MotionControls.ino to read analog signal (0V->3.3V) from low pass filter
+const int nANALOG_INPUT_RESOLUTIION = 12;   //12 bit, 0..4095
+const int nANALOG_INPUT_PIN = 15;           //D15/A1 
+
+//used in MotionControls.ino to read state from Arduino 1
+const int nDIGITAL_INPUT_PIN_0 = 7;     //LSB
+const int nDIGITAL_INPUT_PIN_1 = 8;  
+const int nDIGITAL_INPUT_PIN_2 = 9;   
+
 
 //used in class: Display
 //const int SCREEN_WIDTH = 128; // OLED display width, in pixels
@@ -11,14 +29,6 @@
 
 
 
-//used in MotionCommands.ino to send state to send Arduino 2
-const int nDIGITAL_OUTPUT_PIN_0 =  7;   //D7, most significant value
-const int nDIGITAL_OUTPUT_PIN_1 =  8;   //D8
-const int nDIGITAL_OUTPUT_PIN_2 =  9;   //D9, least significant value
-
-//used in MotionCommands.ino to generate pwm signal  to send Arduino 2
-const int nPWM_PIN = 10;         //~D10
-const int nPWM_FREQUENCY = 500; //Hz, 500 is default, I think max is 31KHz
 
 //used in class ....
 const int RED = 22; 

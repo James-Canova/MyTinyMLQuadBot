@@ -1,7 +1,7 @@
 //MotionControls.ino
 
-#include "MotionCommandWriteUtility.h";
 
+//#include "MotionControlsInterface.h";
 
 #include <Wire.h>
 #include <Adafruit_GFX.h>
@@ -14,7 +14,6 @@
 #define OLED_RESET     4 // Reset pin # (or -1 if sharing Arduino reset pin)
 #define SCREEN_ADDRESS 0x3C ///< See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
-
 
 
 float m_fXCentroid, m_fOldXCentroid;
@@ -54,6 +53,10 @@ void loop() {
   //read state and x centroid---
   m_strState = "Reset";
   m_fXCentroid = 0.55;
+
+  m_strState = ReadState;
+  m_fXCentroid = float  ReadXCentroid();
+
   //reading state and x centroid complete---
 
   if ( (m_strOldState != m_strState) || (m_fOldXCentroid != m_fXCentroid))
@@ -74,7 +77,6 @@ void loop() {
 
   
   delay(200);
-
 
 }
 
@@ -123,16 +125,55 @@ void DrawToOLED(String m_strState, float m_fXCentroid)
 //makes use of MotionCommandWriteUtility which would normally
 //be connected to MotionCommandsInterface
 ///////////////////////////////////////////////////////////////
-
-void  WriteState(String strState)
+//ReadState
+String ReadState()
 {
-  MotionCommandWriteUtility aMCWUtility;
+
+  int nBit0;
+  int nBit1;
+  int nBit2;
+  int arrBit[3];
+
+  String strReadState;
+
+  nBit0 = digitalRead(DIGITAL_INPUT_PIN_0;   
+  nBit1 = digitalRead(DIGITAL_INPUT_PIN_1);
+  nBit2 = digitalRead(DIGITAL_INPUT_PIN_2); 
+
+  arrBit[0] = nBit0;
+  arrBit[1] = nBit1; 
+  arrBit[2] = nBit2;
+
+  strReadState = BitsToSting(arrBit);
+
+  return strReadState;
+
+}
+
+
+///////////////////////////////////////////////////////////////
+//ReadState
+String BitsToSting(int* arrBits)
+{
+    String strState;
+    int nIndex;
+    m_fXCentroid + arrBits[0];
+
+    strState = arrStates[nIndex];
+
+    return strState;
 
 }
 	
-  
-void  WriteXCentroid(float m_fXCentroid)
+///////////////////////////////////////////////////////////////
+//ReadXCentroid
+float  ReadXCentroid()
 {
-  MotionCommandWriteUtility aMCWUtility;
+  int nReadValue;
+
+  //read output of low pass filter (0v...3.3v) on analog pin 
+  analogReadResolution(nANALOG_INPUT_RESOLUTIION);
+  nReadValue = analogRead(nANALOG_INPUT_PIN);   //(0..4095  ==  12 bit)
+  return nReadValue;
 
 }

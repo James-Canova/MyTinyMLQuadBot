@@ -2,12 +2,13 @@
 
 
 #include "MotionCommandWriteUtility.h"
-#include "mbed.h"
 #include "Constants.h"
-#include "Arduino.h"
+#include <Arduino.h>
 #include "States.h"
 
 MotionCommandWriteUtility aWriteUtility;
+
+#include "mbed.h"
 
 //const int nPWMpin = 10;         //~D10
 //const int nPWM_FREQUENCY = 500; //Hz, 500 is default, I think max is 31KHz
@@ -17,6 +18,8 @@ mbed::PwmOut m_pwmPin( digitalPinToPinName( nPWM_PIN ) );
 String m_strState;
 
 void setup() {
+
+  Serial.begin(9600);
 
   m_strState = "Reset";
 
@@ -37,6 +40,8 @@ void loop() {
 
   //set according to state diagram (Draftsight)
   m_strState = "Reset";
+
+  Serial.println(m_strState);
 
   //Write Data for reading by Arduino 2
   WriteData(m_strState, fXCentroid);
@@ -65,16 +70,18 @@ void WriteState(String strState)
   int nDigitalWriteValue0;  //LSB
   int nDigitalWriteValue1;
   int nDigitalWriteValue2;
+  
+  byte nState;
 
   //find index of strState in arrSTATES
   int nIndex;
   
-  nIndex = FindIndex(strState);
+  nState = FindIndex(strState);
 
-
-  nDigitalWriteValue0 = 0;
-  nDigitalWriteValue1 = 1;
-  nDigitalWriteValue2 = 0;
+  nState = FindIndex(strState);
+  nDigitalWriteValue0 = bitRead(nState,0);
+  nDigitalWriteValue0 = bitRead(nState,1);
+  nDigitalWriteValue0 = bitRead(nState,2);
 
   digitalWrite(nDIGITAL_OUTPUT_PIN_0, nDigitalWriteValue0);
   digitalWrite(nDIGITAL_OUTPUT_PIN_1, nDigitalWriteValue1);
@@ -87,12 +94,7 @@ void WriteState(String strState)
 //WriteXCentroid
 void WriteXCentroid(float fXCentroid)
 {
-
   float fDutyCycle;
-  fDutyCycle = fXCentroid;
-
-  //const int m_nPWM_FREQUENCY = 500; //Hz, 500 is default
-  //m_nPWMpin.period( 1.0 / nPWM_FREQUENCY );   //must be in seconds
 
 	fDutyCycle = fXCentroid;  //0->1, 0V-3.3V
 
@@ -101,7 +103,8 @@ void WriteXCentroid(float fXCentroid)
 
 
 
-//FindIndex-----
+/////////////////////////////////////////////////////////
+//FindIndex
 int FindIndex(String strState)
 {
   int nIndex;
