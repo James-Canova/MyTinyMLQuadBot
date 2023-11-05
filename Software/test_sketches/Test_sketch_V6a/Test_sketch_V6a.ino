@@ -1,4 +1,6 @@
-//pcb_test_led_V0a
+//Test_sketch_V5a.ino
+
+//for leds
 
 //from: https://support.arduino.cc/hc/en-us/articles/
 //360016724140-How-to-control-the-RGB-LED-and
