@@ -3,6 +3,9 @@
 
 //#include "MotionControlsInterface.h";
 
+#include "Constants.h"
+#include "States.h"
+
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
@@ -51,11 +54,8 @@ void setup(){
 void loop() {
 
   //read state and x centroid---
-  m_strState = "Reset";
-  m_fXCentroid = 0.55;
-
-  m_strState = ReadState;
-  m_fXCentroid = float  ReadXCentroid();
+  m_strState = ReadState();
+  m_fXCentroid = ReadXCentroid();
 
   //reading state and x centroid complete---
 
@@ -69,8 +69,9 @@ void loop() {
 
 
   //write X centroid and state to pins----
-  WriteState(m_strState); 
-  WriteXCentroid(m_fXCentroid);
+  DrawToOLED(m_strState, m_fXCentroid);
+  //WriteState(m_strState); 
+  //WriteXCentroid(m_fXCentroid);
 
 
   //put state switch case here------
@@ -87,7 +88,7 @@ void loop() {
 ///////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////
-void DrawToOLED(String m_strState, float m_fXCentroid)
+void DrawToOLED(String strState, float fXCentroid)
 {
 
   String strOut;
@@ -104,14 +105,14 @@ void DrawToOLED(String m_strState, float m_fXCentroid)
   //print first line which is the state---
   display.setCursor(0,nYFirstLine);             
   strOut = "State: ";
-  strOut = strOut + m_strState;
+  strOut = strOut + strState;
   display.println(strOut);
 
 
   //print second line which is the X centroid---
   display.setCursor(0,nYSecondLine);   
   strOut = "X Centroid: ";
-  strOut = strOut + String(m_fXCentroid,2);
+  strOut = strOut + String(fXCentroid,2);
   display.println(strOut);
 
   display.display(); 
@@ -136,15 +137,19 @@ String ReadState()
 
   String strReadState;
 
-  nBit0 = digitalRead(DIGITAL_INPUT_PIN_0;   
-  nBit1 = digitalRead(DIGITAL_INPUT_PIN_1);
-  nBit2 = digitalRead(DIGITAL_INPUT_PIN_2); 
+  nBit0 = digitalRead(nDIGITAL_INPUT_PIN_0);   
+  nBit1 = digitalRead(nDIGITAL_INPUT_PIN_1);
+  nBit2 = digitalRead(nDIGITAL_INPUT_PIN_2); 
+
+  nBit0 = 0;
+  nBit1 = 0;
+  nBit2 = 1; 
 
   arrBit[0] = nBit0;
   arrBit[1] = nBit1; 
   arrBit[2] = nBit2;
 
-  strReadState = BitsToSting(arrBit);
+  strReadState = BitsToString(arrBit);
 
   return strReadState;
 
@@ -153,13 +158,16 @@ String ReadState()
 
 ///////////////////////////////////////////////////////////////
 //ReadState
-String BitsToSting(int* arrBits)
+String BitsToString(int* arrBit)
 {
     String strState;
     int nIndex;
-    m_fXCentroid + arrBits[0];
 
-    strState = arrStates[nIndex];
+    //nIndex =  (arrBit[2] * 4.0) + (arrBit[1] * 2.0) + arrBit[0];
+
+    strState = arrSTATES[nIndex];
+
+    //strState = String(nIndex);
 
     return strState;
 
