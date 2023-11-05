@@ -57,11 +57,11 @@ void loop() {
   m_strState = ReadState();
   m_fXCentroid = ReadXCentroid();
 
-  //reading state and x centroid complete---
+  DrawToOLED(m_strState, m_fXCentroid);
 
   if ( (m_strOldState != m_strState) || (m_fOldXCentroid != m_fXCentroid))
   {
-    DrawToOLED(m_strState, m_fXCentroid);
+   // DrawToOLED(m_strState, m_fXCentroid);
   }
 
   m_fOldXCentroid = m_fXCentroid;
@@ -141,9 +141,9 @@ String ReadState()
   nBit1 = digitalRead(nDIGITAL_INPUT_PIN_1);
   nBit2 = digitalRead(nDIGITAL_INPUT_PIN_2); 
 
-  nBit0 = 0;
-  nBit1 = 0;
-  nBit2 = 1; 
+  //nBit0 = 0;
+  //nBit1 = 0;
+  //nBit2 = 1; 
 
   arrBit[0] = nBit0;
   arrBit[1] = nBit1; 
@@ -163,11 +163,9 @@ String BitsToString(int* arrBit)
     String strState;
     int nIndex;
 
-    //nIndex =  (arrBit[2] * 4.0) + (arrBit[1] * 2.0) + arrBit[0];
+    nIndex =  (arrBit[2] * 4.0) + (arrBit[1] * 2.0) + arrBit[0];
 
     strState = arrSTATES[nIndex];
-
-    //strState = String(nIndex);
 
     return strState;
 

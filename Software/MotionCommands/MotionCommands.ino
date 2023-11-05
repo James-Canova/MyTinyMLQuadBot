@@ -1,6 +1,5 @@
 //MotionCommands.ino
 
-
 #include "MotionCommandWriteUtility.h"
 #include "Constants.h"
 #include <Arduino.h>
@@ -25,7 +24,7 @@ void setup() {
 
   m_pwmPin.period( 1.0 / nPWM_FREQUENCY );   //seconds
 
-  pinMode(nDIGITAL_OUTPUT_PIN_0, OUTPUT); //D7, LSB
+  pinMode(nDIGITAL_OUTPUT_PIN_0, OUTPUT); //LSB
   pinMode(nDIGITAL_OUTPUT_PIN_1, OUTPUT);
   pinMode(nDIGITAL_OUTPUT_PIN_2, OUTPUT);
 
@@ -36,12 +35,10 @@ void loop() {
 
   //read from Edge Impulse
   float fXCentroid;
-  fXCentroid = 0.55;
+  fXCentroid = 0.50;
 
   //set according to state diagram (Draftsight)
   m_strState = "Reset";
-
-  Serial.println(m_strState);
 
   //Write Data for reading by Arduino 2
   WriteData(m_strState, fXCentroid);
@@ -70,18 +67,15 @@ void WriteState(String strState)
   int nDigitalWriteValue0;  //LSB
   int nDigitalWriteValue1;
   int nDigitalWriteValue2;
-  
-  byte nState;
 
   //find index of strState in arrSTATES
-  int nIndex;
-  
-  nState = FindIndex(strState);
+  byte byteIndex;
 
-  nState = FindIndex(strState);
-  nDigitalWriteValue0 = bitRead(nState,0);
-  nDigitalWriteValue0 = bitRead(nState,1);
-  nDigitalWriteValue0 = bitRead(nState,2);
+  byteIndex = FindIndex(strState);
+
+  nDigitalWriteValue0 = bitRead(byteIndex,0);
+  nDigitalWriteValue1 = bitRead(byteIndex,1);
+  nDigitalWriteValue2 = bitRead(byteIndex,2);
 
   digitalWrite(nDIGITAL_OUTPUT_PIN_0, nDigitalWriteValue0);
   digitalWrite(nDIGITAL_OUTPUT_PIN_1, nDigitalWriteValue1);
@@ -105,24 +99,24 @@ void WriteXCentroid(float fXCentroid)
 
 /////////////////////////////////////////////////////////
 //FindIndex
-int FindIndex(String strState)
+byte FindIndex(String strState)
 {
-  int nIndex;
-  nIndex = -1;
+  byte byteIndex;
+  byteIndex = 0;
 
   int n = sizeof(arrSTATES) / sizeof(arrSTATES[0]);
   
-  for(int i=0;i<n;i++)
+  for(int i=0; i<n; i++)
   {
       if(arrSTATES[i] == strState)
       {
           //If current value is equal to our element
-          //then replace the index value and break the loop
-          nIndex = i;
+          //then save value and break the loop
+          byteIndex = i;
           break;
       }
   } 
-  return nIndex;
+  return byteIndex;
 }
 
 
