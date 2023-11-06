@@ -1,41 +1,59 @@
-//Test_sketch_V5a.ino
+//Test_sketch_V6a.ino
 
-//for leds
+//https://gammon.com.au/interrupts
 
-//from: https://support.arduino.cc/hc/en-us/articles/
-//360016724140-How-to-control-the-RGB-LED-and
-//-Power-LED-of-the-Nano-33-BLE-boards-
+const byte LED = 23;
+const byte PUSHBUTTON = 17;
 
-//folder: Project 10b
+volatile int m_nCounter;
 
-//James Canova
 
- #define RED 22     
- #define BLUE 24     
- #define GREEN 23
+void setup ()
+{
+  m_nCounter = 0;
 
-void setup() {
-  // put your setup code here, to run once:
+  Serial.begin(9600);
 
-  pinMode(RED, OUTPUT);
-  pinMode(BLUE, OUTPUT);
-  pinMode(GREEN, OUTPUT);  
+  //LED
+  pinMode (LED, OUTPUT);  
 
-}
+  digitalWrite (PUSHBUTTON, HIGH);  // not sure why this is required******
+  attachInterrupt (digitalPinToInterrupt (PUSHBUTTON), pushswitchPressed, RISING);  // attach interrupt handler
+  
+}  // end of setup
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop ()
+{
+  String strOut;
 
-  digitalWrite(RED, LOW); // turn the LED off by making the voltage LOW
-  delay(1000);            // wait for a second
-  digitalWrite(GREEN, LOW);
-  delay(1000);  
-  digitalWrite(BLUE, LOW);
-  delay(1000);  
-  digitalWrite(RED, HIGH); // turn the LED on (HIGH is the voltage level)
-  delay(1000);                         
-  digitalWrite(GREEN, HIGH);
-  delay(1000);  
-  digitalWrite(BLUE, HIGH);
-  delay(1000);    
-}
+
+  if (m_nCounter == 0)
+  {
+    strOut = "Reset";
+  }
+
+
+  if (m_nCounter == 1)
+  {
+    strOut = "Ready";
+  }
+
+  if (m_nCounter == 2)
+  {
+    strOut = "Walk";
+  }
+
+  strOut = "State: " + strOut;
+  Serial.println(strOut);
+  
+} 
+
+///////////////////////////////////////////////////////////
+// Interrupt Service Routine (ISR)
+void pushswitchPressed ()
+{
+  m_nCounter = m_nCounter + 1;
+  if (m_nCounter > 2) {
+    m_nCounter = 0;
+    }
+}  // end of pushswitchPressed

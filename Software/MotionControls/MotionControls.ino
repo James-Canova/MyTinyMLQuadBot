@@ -3,6 +3,8 @@
 
 //#include "MotionControlsInterface.h";
 
+#include "LEDRGB.h"
+
 #include "Constants.h"
 #include "States.h"
 
@@ -19,13 +21,22 @@
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 
+LEDRGB m_ledRGB;
+
+
 float m_fXCentroid, m_fOldXCentroid;
 String m_strState, m_strOldState;
 
 void setup(){
-  Serial.begin(9600);
+
+  //LEDs-----------------------------------
+  m_ledRGB.Initialize();
+  m_ledRGB.AllLedsOff();
+  m_ledRGB.LedOn(BLUE);
+  //LEDs-----------------------------------
 
 
+  //Display--------------------------------
   // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
   if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
     Serial.println(F("SSD1306 allocation failed"));
@@ -40,7 +51,9 @@ void setup(){
   // Clear the buffer
   display.clearDisplay();
   display.display();
-  delay(2000);
+  delay(1000);
+  //Display--------------------------------
+
 
 
   m_fXCentroid = -99.0;
@@ -76,7 +89,8 @@ void loop() {
 
   //put state switch case here------
 
-  
+
+
   delay(200);
 
 }

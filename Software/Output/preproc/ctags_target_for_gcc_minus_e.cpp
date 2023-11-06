@@ -1,129 +1,129 @@
-# 1 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino"
-//MotionCommands.ino
+# 1 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/test_sketches/Test_sketch_V5a/Test_sketch_V5a.ino"
+//Test_sketch_V5a.ino
+//was: pcb_test_push_button_V0a.ino
 
-# 4 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino" 2
-# 5 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino" 2
-# 6 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino" 2
-# 7 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino" 2
+////for pushbutton and interupts to Reset->Ready->Reset....
 
-MotionCommandWriteUtility aWriteUtility;
+//5 November 2023
 
-# 11 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/MotionCommands/MotionCommands.ino" 2
+//note: pin nPUSHPUTTON (push button on Arduino 1 is default HIGH)
 
-//const int nPWMpin = 10;         //~D10
-//const int nPWM_FREQUENCY = 500; //Hz, 500 is default, I think max is 31KHz
+# 11 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/test_sketches/Test_sketch_V5a/Test_sketch_V5a.ino" 2
+//#include "mbed.h"
 
-mbed::PwmOut m_pwmPin( digitalPinToPinName( nPWM_PIN ) );
+//PinName pnPBpin = (PinName)nPUSHPUTTON_PIN;
+//mbed::InterruptIn m_pbPushbutton(pnPBpin);
+
+# 17 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/test_sketches/Test_sketch_V5a/Test_sketch_V5a.ino" 2
+
+LEDRGB m_ledRGB;
 
 String m_strState;
+String m_strOldState;
+
+String m_strTemp;
+
+volatile int m_nCounter;
+
+volatile bool m_bFlag;
+
+
+///////////////////////////////////////////////////////////////
+//ISR
+///////////////////////////////////////////////////////////////
+void isrPushButton() {
+  m_bFlag != m_bFlag;
+}
+
+
 
 void setup() {
+    //put your setup code here, to run once:
 
-  Serial.begin(9600);
+    Serial.begin(9600);
 
-  m_strState = "Reset";
 
-  m_pwmPin.period( 1.0 / nPWM_FREQUENCY ); //seconds
+    m_ledRGB.Initialize();
+    m_ledRGB.AllLedsOff();
+    //m_ledRGB.LedOn(GREEN);
 
-  pinMode(nDIGITAL_OUTPUT_PIN_0, OUTPUT); //LSB
-  pinMode(nDIGITAL_OUTPUT_PIN_1, OUTPUT);
-  pinMode(nDIGITAL_OUTPUT_PIN_2, OUTPUT);
+    m_strState = "Reset";
+    m_strOldState = "None";
+
+    m_strTemp = "...";
+    m_nCounter = 0;
+
+    m_bFlag = true;
+
+   //m_pbPushbutton.fall(&isrPushButton);  
+
+    digitalWrite (nPUSHPUTTON_PIN, HIGH); // internal pull-up resistor
+    attachInterrupt(digitalPinToInterrupt(17), isrPushButton, CHANGE);
 
 }
-
 
 void loop() {
+  //put your main code here, to run repeatedly:
 
-  //read from Edge Impulse
-  float fXCentroid;
-  fXCentroid = 0.50;
-
-  //set according to state diagram (Draftsight)
-  m_strState = "Reset";
-
-  //Write Data for reading by Arduino 2
-  WriteData(m_strState, fXCentroid);
-
-  //state case switch goes here---
-
-}
-
-
-
-/////////////////////////////////////////////////////////
-// Functions for writing state and centroid
-// (here until can move mbed to MotionCommandsInterface)
-/////////////////////////////////////////////////////////
-void WriteData(String strState, float fXCentroid)
-{
-  WriteState(strState);
-  WriteXCentroid(fXCentroid);
-}
-
-
-/////////////////////////////////////////////////////////
-//WriteState
-void WriteState(String strState)
-{
-  int nDigitalWriteValue0; //LSB
-  int nDigitalWriteValue1;
-  int nDigitalWriteValue2;
-
-  //find index of strState in arrSTATES
-  byte byteIndex;
-
-  byteIndex = FindIndex(strState);
-
-  nDigitalWriteValue0 = bitRead(byteIndex,0);
-  nDigitalWriteValue1 = bitRead(byteIndex,1);
-  nDigitalWriteValue2 = bitRead(byteIndex,2);
-
-  digitalWrite(nDIGITAL_OUTPUT_PIN_0, nDigitalWriteValue0);
-  digitalWrite(nDIGITAL_OUTPUT_PIN_1, nDigitalWriteValue1);
-  digitalWrite(nDIGITAL_OUTPUT_PIN_2, nDigitalWriteValue2);
-}
-
-
-
-/////////////////////////////////////////////////////////
-//WriteXCentroid
-void WriteXCentroid(float fXCentroid)
-{
-  float fDutyCycle;
-
- fDutyCycle = fXCentroid; //0->1, 0V-3.3V
-
-  m_pwmPin.write(fDutyCycle);
-}
-
-
-
-/////////////////////////////////////////////////////////
-//FindIndex
-byte FindIndex(String strState)
-{
-  byte byteIndex;
-  byteIndex = 0;
-
-  int n = sizeof(arrSTATES) / sizeof(arrSTATES[0]);
-
-  for(int i=0; i<n; i++)
+  if (m_bFlag)
   {
-      if(arrSTATES[i] == strState)
-      {
-          //If current value is equal to our element
-          //then save value and break the loop
-          byteIndex = i;
-          break;
-      }
+    m_ledRGB.AllLedsOff();
+    m_ledRGB.LedOn(RED);
+
+  } else {
+    m_ledRGB.AllLedsOff();
   }
-  return byteIndex;
+
+ /*
+  switch (m_nCounter) {
+
+     case 0:   //Reset (straighten legs)
+        m_strTemp = "...";    
+        m_ledRGB.AllLedsOff(); 
+        m_ledRGB.LedOn(RED);
+        delay(2000);
+       break;
+
+     case 1:  //Ready
+        m_strTemp = "...";
+        m_ledRGB.AllLedsOff(); 
+        //m_ledRGB.LedOn(GREEN);        
+       break;
+
+     case 2:  //Sit
+        m_strTemp = "...";
+        m_ledRGB.AllLedsOff(); 
+        //m_ledRGB.LedOn(BLUE);   
+       break;
+
+     case 3:  //Walk
+        m_strTemp = "...";
+       break;
+
+     case 4:  //Pause
+        m_strTemp = "...";
+       //put 2nd level state for neck movement
+       break;
+
+     default: 
+        m_strTemp = "...";
+   }  //end switch
+
+  delay(500);
+
+  */
+
 }
 
 
-void ConvertIntToBinary(int nIndex,int &nBit2,int &nBit1,int &nBit0)
-{
-  nBit2 = 1;
-  nBit1 = 1;
-  nBit0 = 1;
-}
+
+
+
+
+/*
+  m_nCounter = m_nCounter + 1;
+  if (m_nCounter > 2)
+  {
+    m_nCounter = 0;
+  }
+*/

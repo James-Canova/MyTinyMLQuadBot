@@ -1,4 +1,5 @@
 //LEDRGB.cpp
+//#include "Constants.h"
 
 #include "LEDRGB.h"
 
@@ -7,10 +8,6 @@ void  LEDRGB::Initialize()
 	pinMode(RED, OUTPUT);
 	pinMode(BLUE, OUTPUT);
 	pinMode(GREEN, OUTPUT);
-
-	pinMode(nDigitalWriteBit0Pin, OUTPUT);
-	pinMode(nDigitalWriteBit1Pin, OUTPUT);
-	pinMode(nDigitalWriteBit2Pin, OUTPUT);	
 }
 
 
