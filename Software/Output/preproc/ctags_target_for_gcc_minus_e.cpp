@@ -4,126 +4,75 @@
 
 ////for pushbutton and interupts to Reset->Ready->Reset....
 
+//https://gammon.com.au/interrupts
+
 //5 November 2023
 
-//note: pin nPUSHPUTTON (push button on Arduino 1 is default HIGH)
-
 # 11 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/test_sketches/Test_sketch_V5a/Test_sketch_V5a.ino" 2
-//#include "mbed.h"
-
-//PinName pnPBpin = (PinName)nPUSHPUTTON_PIN;
-//mbed::InterruptIn m_pbPushbutton(pnPBpin);
-
-# 17 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/test_sketches/Test_sketch_V5a/Test_sketch_V5a.ino" 2
+# 12 "/home/james/Public/Projects/MyTinyMLQuadBot/Software/test_sketches/Test_sketch_V5a/Test_sketch_V5a.ino" 2
 
 LEDRGB m_ledRGB;
 
 String m_strState;
-String m_strOldState;
-
-String m_strTemp;
 
 volatile int m_nCounter;
-
-volatile bool m_bFlag;
-
-
-///////////////////////////////////////////////////////////////
-//ISR
-///////////////////////////////////////////////////////////////
-void isrPushButton() {
-  m_bFlag != m_bFlag;
-}
-
-
 
 void setup() {
     //put your setup code here, to run once:
 
     Serial.begin(9600);
 
-
     m_ledRGB.Initialize();
     m_ledRGB.AllLedsOff();
-    //m_ledRGB.LedOn(GREEN);
 
-    m_strState = "Reset";
-    m_strOldState = "None";
-
-    m_strTemp = "...";
     m_nCounter = 0;
 
-    m_bFlag = true;
-
-   //m_pbPushbutton.fall(&isrPushButton);  
-
+    //for pushbutton
     digitalWrite (nPUSHPUTTON_PIN, HIGH); // internal pull-up resistor
-    attachInterrupt(digitalPinToInterrupt(17), isrPushButton, CHANGE);
-
+    attachInterrupt(digitalPinToInterrupt(17), isrPushButton, RISING);
 }
+
+
 
 void loop() {
   //put your main code here, to run repeatedly:
 
-  if (m_bFlag)
+String strOut;
+
+
+  if (m_nCounter == 0)
   {
+    strOut = "Reset";
     m_ledRGB.AllLedsOff();
     m_ledRGB.LedOn(RED);
-
-  } else {
-    m_ledRGB.AllLedsOff();
   }
 
- /*
-  switch (m_nCounter) {
+  if (m_nCounter == 1)
+  {
+    strOut = "Ready";
+    m_ledRGB.AllLedsOff();
+    m_ledRGB.LedOn(GREEN);
+  }
 
-     case 0:   //Reset (straighten legs)
-        m_strTemp = "...";    
-        m_ledRGB.AllLedsOff(); 
-        m_ledRGB.LedOn(RED);
-        delay(2000);
-       break;
+  if (m_nCounter == 2)
+  {
+    strOut = "Walk";
+    m_ledRGB.AllLedsOff();
+    m_ledRGB.LedOn(BLUE);
 
-     case 1:  //Ready
-        m_strTemp = "...";
-        m_ledRGB.AllLedsOff(); 
-        //m_ledRGB.LedOn(GREEN);        
-       break;
+  }
 
-     case 2:  //Sit
-        m_strTemp = "...";
-        m_ledRGB.AllLedsOff(); 
-        //m_ledRGB.LedOn(BLUE);   
-       break;
-
-     case 3:  //Walk
-        m_strTemp = "...";
-       break;
-
-     case 4:  //Pause
-        m_strTemp = "...";
-       //put 2nd level state for neck movement
-       break;
-
-     default: 
-        m_strTemp = "...";
-   }  //end switch
-
-  delay(500);
-
-  */
+  strOut = "State: " + strOut;
+  Serial.println(strOut);
 
 }
 
-
-
-
-
-
-/*
+///////////////////////////////////////////////////////////////
+//ISR
+///////////////////////////////////////////////////////////////
+void isrPushButton() {
   m_nCounter = m_nCounter + 1;
-  if (m_nCounter > 2)
-  {
+  if (m_nCounter > 2) {
     m_nCounter = 0;
-  }
-*/
+    }
+}

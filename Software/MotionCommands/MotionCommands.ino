@@ -4,34 +4,49 @@
 #include "Constants.h"
 #include <Arduino.h>
 #include "States.h"
-
-MotionCommandWriteUtility aWriteUtility;
-
 #include "mbed.h"
+#include "LEDRGB.h"
 
-//const int nPWMpin = 10;         //~D10
-//const int nPWM_FREQUENCY = 500; //Hz, 500 is default, I think max is 31KHz
+MotionCommandWriteUtility m_aWriteUtility;
 
+//for writing X centroid to Arduino 2 as PWM signal
 mbed::PwmOut m_pwmPin( digitalPinToPinName( nPWM_PIN ) );
 
+int m_arrBits[3];
+
 String m_strState;
+
+LEDRGB m_ledRGB;
+
+volatile int m_nCounter;
+
+
 
 void setup() {
 
   Serial.begin(9600);
 
-  m_strState = "Reset";
-
+  //for writing X centroid as a PWM signal
   m_pwmPin.period( 1.0 / nPWM_FREQUENCY );   //seconds
 
+  //for writing state
   pinMode(nDIGITAL_OUTPUT_PIN_0, OUTPUT); //LSB
   pinMode(nDIGITAL_OUTPUT_PIN_1, OUTPUT);
   pinMode(nDIGITAL_OUTPUT_PIN_2, OUTPUT);
+
+  m_nCounter = 0;
+    
+  //for pushbutton
+  digitalWrite (nPUSHPUTTON_PIN, HIGH);  // internal pull-up resistor
+  attachInterrupt(digitalPinToInterrupt(17), isrPushButton, RISING);
+  //nPUSHPUTTON_PIN   
 
 }
 
 
 void loop() {
+
+  String strOut;
 
   //read from Edge Impulse
   float fXCentroid;
@@ -43,7 +58,31 @@ void loop() {
   //Write Data for reading by Arduino 2
   WriteData(m_strState, fXCentroid);
 
-  //state case switch goes here---
+  if (m_nCounter == 0)
+  {
+    strOut = "Reset";
+    m_ledRGB.AllLedsOff();
+    m_ledRGB.LedOn(RED);
+  }
+
+  if (m_nCounter == 1)
+  {
+    strOut = "Ready";
+    m_ledRGB.AllLedsOff();
+    m_ledRGB.LedOn(GREEN);    
+  }
+
+  if (m_nCounter == 2)
+  {
+    strOut = "Walk";
+    m_ledRGB.AllLedsOff();
+    m_ledRGB.LedOn(BLUE);
+    
+  }
+
+  strOut = "State: " + strOut;
+  Serial.println(strOut);
+
 
 }  
 
@@ -125,4 +164,16 @@ void ConvertIntToBinary(int nIndex,int &nBit2,int &nBit1,int &nBit0)
   nBit2 = 1;
   nBit1 = 1;       
   nBit0 = 1;
+}
+
+
+
+///////////////////////////////////////////////////////////////
+//ISR
+///////////////////////////////////////////////////////////////
+void isrPushButton() {
+  m_nCounter = m_nCounter + 1;
+  if (m_nCounter > 2) {
+    m_nCounter = 0;
+    }
 }

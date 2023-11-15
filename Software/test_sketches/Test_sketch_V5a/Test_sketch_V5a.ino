@@ -26,6 +26,7 @@ void setup() {
 
     m_nCounter = 0;
     
+    //for pushbutton
     digitalWrite (nPUSHPUTTON_PIN, HIGH);  // internal pull-up resistor
     attachInterrupt(digitalPinToInterrupt(17), isrPushButton, RISING);   
 }
