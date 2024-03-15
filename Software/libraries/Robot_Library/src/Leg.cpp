@@ -45,8 +45,6 @@ void Leg::Initialize(int nLegNumber)
 
 	m_linkUpper.Initialize(nUpperLinkNumber);  
 	m_linkLower.Initialize(nLowerLinkNumber);	
-
-	SetFootXYPos(0);
 }
 
 
@@ -62,7 +60,7 @@ bool Leg::SetFootXYPos(int nFootPositionIndex)
 	bool bResult;
 		
 	//calculate servo angles from x,y coordinates (and link lenths)
-	fx = m_arrFootPositionCoordsXY[nFootPositionIndex][0];
+	fx = m_arrFootPositionCoordsXY[nFootPositionIndex][0]; 
 	fy = m_arrFootPositionCoordsXY[nFootPositionIndex][1];
 	
 	fUpperLinkLength = m_linkUpper.GetLinkLength();
@@ -103,17 +101,6 @@ float Leg::Get_Theta1(){
 float Leg::Get_Theta2(){
 	return m_fTheta2;	
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

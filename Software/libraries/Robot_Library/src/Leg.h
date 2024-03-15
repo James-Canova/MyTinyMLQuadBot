@@ -39,11 +39,13 @@ public:
 
 	//fTheta1:  upper link,   fTheta2:  lower link
 	void SetAnglesOfLegLinks(float fTheta1, float fTheta2);	
-
-
+	
 	//initialize coordinates of foot positions [mm]
 	//1st column is the x values
 	//2nd column is the y values
+	/*
+	
+
 	float m_arrFootPositionCoordsXY[12][2] = {
 		{0.0, -65.0},
 		{-10.0,-65.0},
@@ -59,6 +61,39 @@ public:
 		{10.0, -65.0}
 		} ;
 
+
+	float m_arrFootPositionCoordsXY[12][2] = {
+		{0.0, -71.0},
+		{-5.0,-71.0},
+		{-10.0,-71.0},
+		{-15.0,-71.0},
+		{-10.0, -64.0},
+		{-5.0, -64.0},
+		{0.0, -64.0},
+		{5.0, -64.0},
+		{10.0, -64.0},
+		{15.0, -71.0},
+		{10.0, -71.0},
+		{5.0, -71.0}
+		} ;
+*/
+	float m_arrFootPositionCoordsXY[14][2] = {
+		{0.0, -71.0},
+		{-5.0,-71.0},
+		{-10.0,-71.0},
+		{-15.0,-71.0},
+		{-12.5, -67.5},
+		{-10.0, -64.0},
+		{-5.0, -64.0},
+		{0.0, -64.0},
+		{5.0, -64.0},
+		{10.0, -64.0},
+		{12.5, -67.5},
+		{15.0, -71.0},
+		{10.0, -71.0},
+		{5.0, -71.0}
+		} ;
+		
 		//for debugging
 		float m_fx, m_fy,  m_fTheta1, m_fTheta2;
 		

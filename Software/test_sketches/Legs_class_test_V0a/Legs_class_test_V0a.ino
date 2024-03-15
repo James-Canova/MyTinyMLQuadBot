@@ -34,9 +34,9 @@ void loop() {
   }
 
   //walk
-  for (nCount = 0; nCount < 20; nCount++) {
+  for (nCount = 0; nCount < 5; nCount++) {
     m_Legs.Walk();
-    delay(DELAY);
+    delay(500);
   }
 
   //pause walk
