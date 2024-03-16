@@ -22,16 +22,11 @@ void Legs::Initialize()
 	m_Leg_2.Initialize(2);	
 	m_Leg_3.Initialize(3);	
 	
-	m_arrPosSeqIndex[0] = 3;
-	m_arrPosSeqIndex[1] = 11;
-	m_arrPosSeqIndex[2] = 11;
-	m_arrPosSeqIndex[3] = 3;	
-/*	
-	m_nIndexSeqFoot0 = 3;
-	m_nIndexSeqFoot1 = 11;
-	m_nIndexSeqFoot2 = 11;
-	m_nIndexSeqFoot3 = 3;	
-	*/
+	m_arrPosSeqIndex[0] = 0;
+	m_arrPosSeqIndex[1] = 2;
+	m_arrPosSeqIndex[2] = 2;
+	m_arrPosSeqIndex[3] = 0;	
+
 }
 
 
@@ -52,36 +47,14 @@ void Legs::Walk()
 	m_Leg_2.SetFootXYPos(nIndex_foot_2_position);
 	m_Leg_3.SetFootXYPos(nIndex_foot_3_position);
 	
-	for (int i = 0; i < 4; i++) {
-		
+	for (int i = 0; i < 4; i++) { 	//4 legs
 		m_arrPosSeqIndex[i]  ++;
 		
-		if (m_arrPosSeqIndex[i] > 13){
+		if (m_arrPosSeqIndex[i] > 3){
 			m_arrPosSeqIndex[i] = 0;
 		}
 	}
-/*
-	m_nIndexSeqFoot0 = m_nIndexSeqFoot0 + 1;
-	if (m_nIndexSeqFoot0 > 13) {
-		m_nIndexSeqFoot0 = 3;
-	}
-	
-	m_nIndexSeqFoot1 = m_nIndexSeqFoot1 + 1;
-	if (m_nIndexSeqFoot1 > 13) {
-		m_nIndexSeqFoot1 = 0;
-	}
 
-	m_nIndexSeqFoot2 = m_nIndexSeqFoot2 + 1;
-	if (m_nIndexSeqFoot2 > 13) {
-		m_nIndexSeqFoot2 = 0;
-	}
-
-	m_nIndexSeqFoot3 = m_nIndexSeqFoot3 + 1;
-	if (m_nIndexSeqFoot3 > 13) {
-		m_nIndexSeqFoot3 = 0;
-	}
-	
-*/
 }
 
 void Legs::PauseWalk()
