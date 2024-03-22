@@ -44,11 +44,15 @@ public:
 	//1st column is the x values
 	//2nd column is the y values
 	
-	float m_arrFootPositionCoordsXY[4][2] = {
-		{0.0, -71.0},
-		{-15.0,-71.0},
-		{0.0, -64.0},
-		{15.0, -71.0}
+	float m_arrFootPositionCoordsXY[8][2] = {
+		{0.0, -70.0},
+		{-5.0,-70.0},
+		{-10.0,-70.0},	
+		{-5.0, -65.0},
+		{0.0, -65.0},		
+		{5.0, -65.0},	
+		{10.0, -70.0},
+		{5.0, -70.0}
 		} ;
 		
 		//for debugging

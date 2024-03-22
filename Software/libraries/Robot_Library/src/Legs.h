@@ -31,7 +31,7 @@ public:
 	Leg m_Leg_2 = Leg();
 	Leg m_Leg_3 = Leg();
 	
-	int m_arrFootPosSequence[4] = {0,1,2,3};	
+int m_arrFootPosSequence[8] = {0,1,2,3,4,5,6,7};	
 	
 	int m_arrPosSeqIndex[4];   //one for each leg
 	

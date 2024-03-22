@@ -22,10 +22,10 @@ void Legs::Initialize()
 	m_Leg_2.Initialize(2);	
 	m_Leg_3.Initialize(3);	
 	
-	m_arrPosSeqIndex[0] = 0;
-	m_arrPosSeqIndex[1] = 2;
-	m_arrPosSeqIndex[2] = 2;
-	m_arrPosSeqIndex[3] = 0;	
+	m_arrPosSeqIndex[0] = 0;  //on ground, centre
+ 	m_arrPosSeqIndex[1] = 4;  //raised centre
+	m_arrPosSeqIndex[2] = 4;  //raised centre
+	m_arrPosSeqIndex[3] = 0;	//on ground, centre
 
 }
 
@@ -50,7 +50,7 @@ void Legs::Walk()
 	for (int i = 0; i < 4; i++) { 	//4 legs
 		m_arrPosSeqIndex[i]  ++;
 		
-		if (m_arrPosSeqIndex[i] > 3){
+		if (m_arrPosSeqIndex[i] > 7) {  //max foot position index = 7
 			m_arrPosSeqIndex[i] = 0;
 		}
 	}

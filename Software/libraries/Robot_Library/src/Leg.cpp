@@ -60,7 +60,7 @@ bool Leg::SetFootXYPos(int nFootPositionIndex)
 	bool bResult;
 		
 	//calculate servo angles from x,y coordinates (and link lenths)
-	fx = m_arrFootPositionCoordsXY[nFootPositionIndex][0]; 
+	fx = m_arrFootPositionCoordsXY[nFootPositionIndex][0] * 1.5; 
 	fy = m_arrFootPositionCoordsXY[nFootPositionIndex][1];
 	
 	fUpperLinkLength = m_linkUpper.GetLinkLength();
