@@ -1660,7 +1660,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.3789 91.086) (xy 226.06 91.059)
+			(xy 206.0289 37.746) (xy 219.71 37.719)
 		)
 		(stroke
 			(width 0)
@@ -1690,7 +1690,7 @@
 	)
 	(polyline
 		(pts
-			(xy 203.2 85.344) (xy 203.2 113.538)
+			(xy 196.85 32.004) (xy 196.85 60.198)
 		)
 		(stroke
 			(width 0)
@@ -1710,7 +1710,7 @@
 	)
 	(wire
 		(pts
-			(xy 249.0827 91.0782) (xy 249.0924 98.2461)
+			(xy 242.7327 37.7382) (xy 242.7424 44.9061)
 		)
 		(stroke
 			(width 0)
@@ -1730,7 +1730,7 @@
 	)
 	(polyline
 		(pts
-			(xy 203.2 85.344) (xy 259.08 85.344)
+			(xy 196.85 32.004) (xy 252.73 32.004)
 		)
 		(stroke
 			(width 0)
@@ -1790,7 +1790,7 @@
 	)
 	(polyline
 		(pts
-			(xy 259.08 113.538) (xy 203.2 113.538)
+			(xy 252.73 60.198) (xy 196.85 60.198)
 		)
 		(stroke
 			(width 0)
@@ -1810,7 +1810,7 @@
 	)
 	(wire
 		(pts
-			(xy 249.0924 105.8661) (xy 249.174 110.998)
+			(xy 242.7424 52.5261) (xy 242.824 57.658)
 		)
 		(stroke
 			(width 0)
@@ -1820,7 +1820,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.062 91.059) (xy 249.0827 91.0782)
+			(xy 235.712 37.719) (xy 242.7327 37.7382)
 		)
 		(stroke
 			(width 0)
@@ -1830,7 +1830,7 @@
 	)
 	(polyline
 		(pts
-			(xy 259.08 85.344) (xy 259.08 113.538)
+			(xy 252.73 32.004) (xy 252.73 60.198)
 		)
 		(stroke
 			(width 0)
@@ -1840,7 +1840,7 @@
 	)
 	(wire
 		(pts
-			(xy 221.996 94.234) (xy 226.06 94.234)
+			(xy 215.646 40.894) (xy 219.71 40.894)
 		)
 		(stroke
 			(width 0)
@@ -1860,7 +1860,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.3789 106.2379) (xy 212.344 110.49)
+			(xy 206.0289 52.8979) (xy 205.994 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2130,7 +2130,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.3789 91.086) (xy 212.3789 98.6179)
+			(xy 206.0289 37.746) (xy 206.0289 45.2779)
 		)
 		(stroke
 			(width 0)
@@ -2201,7 +2201,7 @@
 	)
 	(text "5V regulated power for low pass filter"
 		(exclude_from_sim no)
-		(at 204.724 85.09 0)
+		(at 198.374 31.75 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2211,7 +2211,7 @@
 		(uuid "d68b303c-c8b3-45ae-89b4-e37551cebcbe")
 	)
 	(label "GND"
-		(at 222.504 94.234 0)
+		(at 216.154 40.894 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2233,7 +2233,7 @@
 		(uuid "04e54271-56d6-4bae-9dcf-808af8c28873")
 	)
 	(label "7.4V"
-		(at 215.138 91.186 0)
+		(at 208.788 37.846 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2244,7 +2244,7 @@
 		(uuid "32c552d3-ce05-4857-ae9e-70271ed66537")
 	)
 	(label "5V_reg"
-		(at 243.066 91.0617 0)
+		(at 236.716 37.7217 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2266,7 +2266,7 @@
 		(uuid "4a2229b8-65d0-4607-9bf4-20422395fdb3")
 	)
 	(label "GND"
-		(at 212.344 108.712 0)
+		(at 205.994 55.372 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2299,7 +2299,7 @@
 		(uuid "7141eaea-3592-4dd5-813b-558fcadb738e")
 	)
 	(label "GND"
-		(at 249.174 108.204 0)
+		(at 242.824 54.864 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2377,7 +2377,7 @@
 	)
 	(global_label "5V_reg"
 		(shape input)
-		(at 249.0827 91.0782 0)
+		(at 242.7327 37.7382 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2387,7 +2387,7 @@
 		)
 		(uuid "2bc99ce5-4c02-4107-8c46-a6924880ab86")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 257.7853 90.9988 0)
+			(at 251.4353 37.6588 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2421,7 +2421,7 @@
 	)
 	(global_label "7.4V"
 		(shape input)
-		(at 212.3789 91.086 180)
+		(at 206.0289 37.746 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2431,7 +2431,7 @@
 		)
 		(uuid "64080678-ee33-4d27-a106-90edee8b06bc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 205.8534 91.0066 0)
+			(at 199.5034 37.6666 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2465,7 +2465,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 221.996 94.234 180)
+		(at 215.646 40.894 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2475,7 +2475,7 @@
 		)
 		(uuid "762d813e-24ac-41a3-b17c-d2d7bc0da7c8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 212.4467 94.1546 0)
+			(at 206.0967 40.8146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2509,7 +2509,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 249.174 110.998 180)
+		(at 242.824 57.658 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2519,7 +2519,7 @@
 		)
 		(uuid "8bea29f0-a0d8-423e-9bd4-f07594ac542f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 239.6247 110.9186 0)
+			(at 233.2747 57.5786 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2597,7 +2597,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 212.344 110.49 180)
+		(at 205.994 57.15 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2607,7 +2607,7 @@
 		)
 		(uuid "d8a07db5-06da-4cfa-a2ab-608b6a66ce3c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 202.7947 110.4106 0)
+			(at 196.4447 57.0706 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2905,7 +2905,7 @@
 	)
 	(symbol
 		(lib_id "RobotSymLib:BD450M5FP-CE2")
-		(at 213.36 88.9 0)
+		(at 207.01 35.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2913,7 +2913,7 @@
 		(dnp no)
 		(uuid "890dfdc6-84fd-4653-9ed6-2953d0ac6d3c")
 		(property "Reference" "U1"
-			(at 233.68 98.298 0)
+			(at 227.33 44.958 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -2921,7 +2921,7 @@
 			)
 		)
 		(property "Value" "BD450M5FP-CE2"
-			(at 234.061 86.36 0)
+			(at 227.711 33.02 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -2930,7 +2930,7 @@
 			)
 		)
 		(property "Footprint" "RobotFtpLib:BD450M5FP-CE2"
-			(at 234.061 86.36 0)
+			(at 227.711 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2940,7 +2940,7 @@
 			)
 		)
 		(property "Datasheet" "BD450M5FP-CE2"
-			(at 231.521 109.22 0)
+			(at 225.171 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2950,7 +2950,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 213.36 88.9 0)
+			(at 207.01 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3068,7 +3068,7 @@
 	)
 	(symbol
 		(lib_id "RobotSymLib:CL32B475KBUYNNE")
-		(at 212.3789 98.6179 270)
+		(at 206.0289 45.2779 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3076,7 +3076,7 @@
 		(dnp no)
 		(uuid "d65e098b-1837-43f7-8240-c6cbf424501a")
 		(property "Reference" "C1"
-			(at 215.9349 101.6659 0)
+			(at 209.5849 48.3259 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -3085,7 +3085,7 @@
 			)
 		)
 		(property "Value" "CL32B475KBUYNNE"
-			(at 215.9349 102.4279 0)
+			(at 209.5849 49.0879 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -3094,7 +3094,7 @@
 			)
 		)
 		(property "Footprint" "RobotFtpLib:CL32B475KBUYNNE"
-			(at 205.0129 103.6979 0)
+			(at 198.6629 50.3579 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3104,7 +3104,7 @@
 			)
 		)
 		(property "Datasheet" "CL32B475KBUYNNE"
-			(at 219.2369 99.3799 0)
+			(at 212.8869 46.0399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3114,7 +3114,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 212.3789 98.6179 0)
+			(at 206.0289 45.2779 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3208,7 +3208,7 @@
 	)
 	(symbol
 		(lib_id "RobotSymLib:CL32A106KAULNNE")
-		(at 249.0924 98.2461 270)
+		(at 242.7424 44.9061 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3216,7 +3216,7 @@
 		(dnp no)
 		(uuid "ff3334ae-ce39-4450-914c-1f7a12575934")
 		(property "Reference" "C2"
-			(at 252.3944 101.2941 0)
+			(at 246.0444 47.9541 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -3225,7 +3225,7 @@
 			)
 		)
 		(property "Value" "CL32A106KAULNNE"
-			(at 252.6484 102.0561 0)
+			(at 246.2984 48.7161 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -3234,7 +3234,7 @@
 			)
 		)
 		(property "Footprint" "RobotFtpLib:CL32A106KAULNNE"
-			(at 241.5994 101.2941 0)
+			(at 235.2494 47.9541 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3244,7 +3244,7 @@
 			)
 		)
 		(property "Datasheet" "CL32A106KAULNNE"
-			(at 256.0774 99.0081 0)
+			(at 249.7274 45.6681 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3254,7 +3254,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 249.0924 98.2461 0)
+			(at 242.7424 44.9061 0)
 			(effects
 				(font
 					(size 1.27 1.27)
