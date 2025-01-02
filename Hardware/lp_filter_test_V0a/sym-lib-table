@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "max7480esa+")(type "KiCad")(uri "${KICAD8_SYMBOL_DIR}/max7480esa+.kicad_sym")(options "")(descr ""))
+)
