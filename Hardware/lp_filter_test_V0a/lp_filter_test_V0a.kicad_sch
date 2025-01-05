@@ -5,6 +5,129 @@
 	(uuid "f0093381-e7af-4d1a-be11-86ca986e737a")
 	(paper "A4")
 	(lib_symbols
+		(symbol "12102C104KAT2A_1"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C3"
+				(at 1.3462 -3.4036 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "12102C104KAT2A"
+				(at -11.176 -2.286 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "CAPC3325X127N"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "12102C104KAT2A_1_0_0"
+				(rectangle
+					(start 0 -1.9069)
+					(end 0.635 1.905)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 1.9069 -1.9069)
+					(end 2.54 1.905)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(symbol "12102C104KAT2A_1_1_1"
+				(text "0.1uF"
+					(at 1.016 3.048 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
 		(symbol "RobotSymLib:12065C503JAT2A"
 			(pin_names
 				(offset 1.016)
@@ -144,7 +267,7 @@
 					(justify left bottom)
 				)
 			)
-			(property "Footprint" "RobotFtpLib:12102C104KAT2A"
+			(property "Footprint" "CAPC3325X127N"
 				(at 0 0 0)
 				(effects
 					(font
@@ -232,198 +355,12 @@
 					)
 				)
 			)
-		)
-		(symbol "RobotSymLib:BD450M5FP-CE2"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U1"
-				(at 20.32 -9.398 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "BD450M5FP-CE2"
-				(at 20.701 2.54 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-					(hide yes)
-				)
-			)
-			(property "Footprint" "myKiCadGlobalFootprintLibrary:BD450M5FP-CE2"
-				(at 20.701 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "BD450M5FP-CE2"
-				(at 18.161 -20.32 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "BD450M5FP-CE2"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO252-3_ROM TO252-3_ROM-M TO252-3_ROM-L"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "BD450M5FP-CE2_0_1"
-				(polyline
-					(pts
-						(xy 15.24 -7.62) (xy 26.162 -7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 15.24 0) (xy 15.24 -7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 26.162 -7.62) (xy 26.162 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 26.162 0) (xy 15.24 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin power_in line
-					(at 12.7 -2.159 0)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 28.702 -5.08 180)
-					(length 2.54)
-					(name "N.C."
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 28.702 -2.159 180)
-					(length 2.54)
-					(name "VOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "BD450M5FP-CE2_1_1"
-				(pin output line
-					(at 12.7 -5.334 0)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
+			(symbol "12102C104KAT2A_1_1"
+				(text "0.1uF"
+					(at 5.08 4.572 0)
+					(effects
+						(font
+							(size 1.27 1.27)
 						)
 					)
 				)
@@ -436,20 +373,22 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "CR"
-				(at 5.08 4.445 0)
+			(property "Reference" "D1"
+				(at 3.556 3.81 0)
 				(effects
 					(font
 						(size 1.524 1.524)
 					)
+					(justify left)
 				)
 			)
 			(property "Value" "BZT52C3V3-7-F"
-				(at 6.731 -7.239 0)
+				(at 4.826 -7.366 0)
 				(effects
 					(font
 						(size 1.524 1.524)
 					)
+					(hide yes)
 				)
 			)
 			(property "Footprint" "RobotFtpLib:BZT52C3V3-7-F"
@@ -760,492 +699,6 @@
 				)
 				(pin unspecified line
 					(at 0 0 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "RobotSymLib:CL32A106KAULNNE"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 3.81 3.81 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "CL32A106KAULNNE"
-				(at 3.81 -3.81 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "RobotFtpLib:CL32A106KAULNNE"
-				(at 3.048 -7.493 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "CL32A106KAULNNE"
-				(at 0.762 6.985 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "CL32A106KAULNNE"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "CAP_CL32_SAM CAP_CL32_SAM-M CAP_CL32_SAM-L"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CL32A106KAULNNE_1_1"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 3.4798 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.4798 -1.905) (xy 3.4798 1.905)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.1148 -1.905) (xy 4.1148 1.905)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.1148 0) (xy 5.08 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "CL32A106KAULNNE_1_2"
-				(polyline
-					(pts
-						(xy -1.905 -4.1148) (xy 1.905 -4.1148)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.905 -3.4798) (xy 1.905 -3.4798)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -4.1148) (xy 0 -5.08)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy 0 -3.4798)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 270)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "RobotSymLib:CL32B475KBUYNNE"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 3.81 3.81 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "CL32B475KBUYNNE"
-				(at 3.81 -3.81 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "RobotFtpLib:CL32B475KBUYNNE"
-				(at 5.08 -7.366 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "CL32B475KBUYNNE"
-				(at 0.762 6.858 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "CL32B475KBUYNNE"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "CAP_CL32_SAM CAP_CL32_SAM-M CAP_CL32_SAM-L"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CL32B475KBUYNNE_1_1"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 3.4798 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.4798 -1.905) (xy 3.4798 1.905)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.1148 -1.905) (xy 4.1148 1.905)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.1148 0) (xy 5.08 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "CL32B475KBUYNNE_1_2"
-				(polyline
-					(pts
-						(xy -1.905 -4.1148) (xy 1.905 -4.1148)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.905 -3.4798) (xy 1.905 -3.4798)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -4.1148) (xy 0 -5.08)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy 0 -3.4798)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 270)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -7.62 90)
 					(length 2.54)
 					(name ""
 						(effects
@@ -1660,16 +1113,6 @@
 	)
 	(wire
 		(pts
-			(xy 206.0289 37.746) (xy 219.71 37.719)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "01281708-0e6e-4b72-a9d4-e3d3fd3c4c4d")
-	)
-	(wire
-		(pts
 			(xy 164.804 94.7235) (xy 164.804 109.7857)
 		)
 		(stroke
@@ -1688,16 +1131,6 @@
 		)
 		(uuid "0814e00b-7cd3-4d89-b46d-cf18e599bb40")
 	)
-	(polyline
-		(pts
-			(xy 196.85 32.004) (xy 196.85 60.198)
-		)
-		(stroke
-			(width 0)
-			(type dash)
-		)
-		(uuid "0b284bc2-7cb5-4f44-a150-93590256a160")
-	)
 	(wire
 		(pts
 			(xy 164.804 80.2483) (xy 174.2137 80.2676)
@@ -1710,16 +1143,6 @@
 	)
 	(wire
 		(pts
-			(xy 242.7327 37.7382) (xy 242.7424 44.9061)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ea9152e-d9e9-4bc4-8458-07b44b480156")
-	)
-	(wire
-		(pts
 			(xy 126.746 91.694) (xy 126.746 84.6646)
 		)
 		(stroke
@@ -1727,16 +1150,6 @@
 			(type default)
 		)
 		(uuid "0f8b64f2-2e62-49d3-a10c-73b29b20829a")
-	)
-	(polyline
-		(pts
-			(xy 196.85 32.004) (xy 252.73 32.004)
-		)
-		(stroke
-			(width 0)
-			(type dash)
-		)
-		(uuid "0f9ac459-2124-421b-a5e7-d54c0318e382")
 	)
 	(wire
 		(pts
@@ -1788,16 +1201,6 @@
 		)
 		(uuid "306cfe3f-8794-41e0-a5b4-38d9ea63c274")
 	)
-	(polyline
-		(pts
-			(xy 252.73 60.198) (xy 196.85 60.198)
-		)
-		(stroke
-			(width 0)
-			(type dash)
-		)
-		(uuid "32bd34d2-00a8-445c-a6a7-a89a1f66bcb0")
-	)
 	(wire
 		(pts
 			(xy 151.1392 97.8306) (xy 151.13 97.79)
@@ -1810,46 +1213,6 @@
 	)
 	(wire
 		(pts
-			(xy 242.7424 52.5261) (xy 242.824 57.658)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "43d08037-b820-401b-a828-ebd394094d6f")
-	)
-	(wire
-		(pts
-			(xy 235.712 37.719) (xy 242.7327 37.7382)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "447533ae-606c-449f-80cc-394050f55d50")
-	)
-	(polyline
-		(pts
-			(xy 252.73 32.004) (xy 252.73 60.198)
-		)
-		(stroke
-			(width 0)
-			(type dash)
-		)
-		(uuid "459aa7e5-7a4a-493b-8027-74cdc09a2292")
-	)
-	(wire
-		(pts
-			(xy 215.646 40.894) (xy 219.71 40.894)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a96cf5a-e234-4ac5-b31f-c6df724cc7be")
-	)
-	(wire
-		(pts
 			(xy 151.13 101.092) (xy 156.8487 101.1519)
 		)
 		(stroke
@@ -1857,16 +1220,6 @@
 			(type default)
 		)
 		(uuid "5af65b11-ddc2-49b3-9d94-2d8019a1e841")
-	)
-	(wire
-		(pts
-			(xy 206.0289 52.8979) (xy 205.994 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63150e1b-ac15-41ca-bbdc-0645483e04d8")
 	)
 	(wire
 		(pts
@@ -2130,16 +1483,6 @@
 	)
 	(wire
 		(pts
-			(xy 206.0289 37.746) (xy 206.0289 45.2779)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e3ab61bb-1d09-4e81-a037-f30254cd7aea")
-	)
-	(wire
-		(pts
 			(xy 98.9584 105.9942) (xy 99.0161 105.7546)
 		)
 		(stroke
@@ -2199,28 +1542,6 @@
 		)
 		(uuid "a802c7d6-d790-4838-99d4-7de44e869e69")
 	)
-	(text "5V regulated power for low pass filter"
-		(exclude_from_sim no)
-		(at 198.374 31.75 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d68b303c-c8b3-45ae-89b4-e37551cebcbe")
-	)
-	(label "GND"
-		(at 216.154 40.894 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "02231015-95f3-4fb8-a80d-ecce7ca15c0b")
-	)
 	(label "GND"
 		(at 98.9584 116.1542 0)
 		(fields_autoplaced yes)
@@ -2232,28 +1553,6 @@
 		)
 		(uuid "04e54271-56d6-4bae-9dcf-808af8c28873")
 	)
-	(label "7.4V"
-		(at 208.788 37.846 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "32c552d3-ce05-4857-ae9e-70271ed66537")
-	)
-	(label "5V_reg"
-		(at 236.716 37.7217 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "36cc5e4e-ca75-4dc5-9754-e3e8b632b778")
-	)
 	(label "GND"
 		(at 155.3468 120.3557 0)
 		(fields_autoplaced yes)
@@ -2264,17 +1563,6 @@
 			(justify left bottom)
 		)
 		(uuid "4a2229b8-65d0-4607-9bf4-20422395fdb3")
-	)
-	(label "GND"
-		(at 205.994 55.372 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5dd6cb94-bf8a-4328-bfd8-992b509a07a5")
 	)
 	(label "GND"
 		(at 174.7354 120.5115 0)
@@ -2297,17 +1585,6 @@
 			(justify left bottom)
 		)
 		(uuid "7141eaea-3592-4dd5-813b-558fcadb738e")
-	)
-	(label "GND"
-		(at 242.824 54.864 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7a62fb78-63b7-4c0f-b678-eb84aa65428f")
 	)
 	(label "DC_out"
 		(at 98.9594 104.6791 0)
@@ -2375,28 +1652,6 @@
 			)
 		)
 	)
-	(global_label "5V_reg"
-		(shape input)
-		(at 242.7327 37.7382 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2bc99ce5-4c02-4107-8c46-a6924880ab86")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 251.4353 37.6588 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "PWM"
 		(shape input)
 		(at 174.4702 83.9215 0)
@@ -2415,28 +1670,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "7.4V"
-		(shape input)
-		(at 206.0289 37.746 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "64080678-ee33-4d27-a106-90edee8b06bc")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 199.5034 37.6666 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -2465,28 +1698,6 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 215.646 40.894 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "762d813e-24ac-41a3-b17c-d2d7bc0da7c8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 206.0967 40.8146 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape input)
 		(at 123.6189 97.7828 180)
 		(fields_autoplaced yes)
 		(effects
@@ -2498,28 +1709,6 @@
 		(uuid "8a102fe4-608d-498f-bb7b-00e6c580b258")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 114.0696 97.7034 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape input)
-		(at 242.824 57.658 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "8bea29f0-a0d8-423e-9bd4-f07594ac542f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 233.2747 57.5786 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2591,28 +1780,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape input)
-		(at 205.994 57.15 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "d8a07db5-06da-4cfa-a2ab-608b6a66ce3c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 196.4447 57.0706 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -2707,7 +1874,7 @@
 		(dnp no)
 		(uuid "50976690-1ab4-45f7-8e04-a75d62414ef6")
 		(property "Reference" "D1"
-			(at 95.1484 112.5982 0)
+			(at 94.996 112.522 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -2716,12 +1883,11 @@
 			)
 		)
 		(property "Value" "BZT52C3V3-7-F"
-			(at 95.6564 111.0742 0)
+			(at 106.934 114.3 0)
 			(effects
 				(font
 					(size 1.524 1.524)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "RobotFtpLib:BZT52C3V3-7-F"
@@ -2835,6 +2001,7 @@
 		)
 	)
 	(symbol
+		(lib_name "12102C104KAT2A_1")
 		(lib_id "RobotSymLib:12102C104KAT2A")
 		(at 155.3711 113.371 270)
 		(unit 1)
@@ -2844,7 +2011,7 @@
 		(dnp no)
 		(uuid "8493d74b-7b63-401d-a92f-4e7dd676d933")
 		(property "Reference" "C3"
-			(at 151.9675 114.7172 0)
+			(at 152.146 114.808 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2860,7 +2027,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "RobotFtpLib:12102C104KAT2A"
+		(property "Footprint" "CAPC3325X127N"
 			(at 155.3711 113.371 0)
 			(effects
 				(font
@@ -2898,82 +2065,6 @@
 			(project "lp_filter_test_V0a"
 				(path "/f0093381-e7af-4d1a-be11-86ca986e737a"
 					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "RobotSymLib:BD450M5FP-CE2")
-		(at 207.01 35.56 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "890dfdc6-84fd-4653-9ed6-2953d0ac6d3c")
-		(property "Reference" "U1"
-			(at 227.33 44.958 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "BD450M5FP-CE2"
-			(at 227.711 33.02 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "RobotFtpLib:BD450M5FP-CE2"
-			(at 227.711 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "BD450M5FP-CE2"
-			(at 225.171 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 207.01 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4120c7df-9350-463e-b94a-f596e74a9933")
-		)
-		(pin "2"
-			(uuid "25b6bdb3-aec5-41c1-8f88-75c4a62523ea")
-		)
-		(pin "3"
-			(uuid "4860095d-660e-4e4e-ad3f-4f44443783ce")
-		)
-		(pin "4"
-			(uuid "947fb05a-1a68-47ee-84bc-b5243241dd7d")
-		)
-		(instances
-			(project "lp_filter_test_V0a"
-				(path "/f0093381-e7af-4d1a-be11-86ca986e737a"
-					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -3067,77 +2158,6 @@
 		)
 	)
 	(symbol
-		(lib_id "RobotSymLib:CL32B475KBUYNNE")
-		(at 206.0289 45.2779 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d65e098b-1837-43f7-8240-c6cbf424501a")
-		(property "Reference" "C1"
-			(at 209.5849 48.3259 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CL32B475KBUYNNE"
-			(at 209.5849 49.0879 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "RobotFtpLib:CL32B475KBUYNNE"
-			(at 198.6629 50.3579 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "CL32B475KBUYNNE"
-			(at 212.8869 46.0399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 206.0289 45.2779 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c429c184-caa8-483c-a311-65d546cf0eaa")
-		)
-		(pin "2"
-			(uuid "a0a6f491-b5e9-435e-8a38-f79d9a519ea8")
-		)
-		(instances
-			(project "lp_filter_test_V0a"
-				(path "/f0093381-e7af-4d1a-be11-86ca986e737a"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "RobotSymLib:12102C104KAT2A")
 		(at 164.719 113.5038 270)
 		(unit 1)
@@ -3163,7 +2183,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "RobotFtpLib:12102C104KAT2A"
+		(property "Footprint" "CAPC3325X127N"
 			(at 164.719 113.5038 0)
 			(effects
 				(font
@@ -3201,77 +2221,6 @@
 			(project "lp_filter_test_V0a"
 				(path "/f0093381-e7af-4d1a-be11-86ca986e737a"
 					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "RobotSymLib:CL32A106KAULNNE")
-		(at 242.7424 44.9061 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ff3334ae-ce39-4450-914c-1f7a12575934")
-		(property "Reference" "C2"
-			(at 246.0444 47.9541 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CL32A106KAULNNE"
-			(at 246.2984 48.7161 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "RobotFtpLib:CL32A106KAULNNE"
-			(at 235.2494 47.9541 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "CL32A106KAULNNE"
-			(at 249.7274 45.6681 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 242.7424 44.9061 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "553e617f-29e6-4c76-97b0-85b5183ab5a4")
-		)
-		(pin "2"
-			(uuid "cd183298-9bb2-44d4-abf2-fd54e4312df2")
-		)
-		(instances
-			(project "lp_filter_test_V0a"
-				(path "/f0093381-e7af-4d1a-be11-86ca986e737a"
-					(reference "C2")
 					(unit 1)
 				)
 			)
