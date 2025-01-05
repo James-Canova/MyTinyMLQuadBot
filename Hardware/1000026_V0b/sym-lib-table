@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "RobotSymLib")(type "KiCad")(uri "/home/james/Public/Projects/MyTinyMLQuadBot/Hardware/RobotKiCadGlobalLibrary/RobotSymLibrary.kicad_sym")(options "")(descr ""))
+)
