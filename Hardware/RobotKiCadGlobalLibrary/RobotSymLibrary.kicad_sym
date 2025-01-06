@@ -891,7 +891,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RobotFtpLib:RGEF300HF"
+		(property "Footprint" "footprints:RGEF500HF"
 			(at 4.953 -9.271 0)
 			(effects
 				(font

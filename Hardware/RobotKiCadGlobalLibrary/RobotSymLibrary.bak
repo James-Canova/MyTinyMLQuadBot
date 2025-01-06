@@ -875,7 +875,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "F1"
+		(property "Reference" "F"
 			(at 6.0119 1.5702 0)
 			(effects
 				(font

@@ -5137,7 +5137,7 @@
 					)
 				)
 			)
-			(property "Footprint" "RobotFtpLib:RGEF300HF"
+			(property "Footprint" "footprints:RGEF500HF"
 				(at 4.953 -9.271 0)
 				(effects
 					(font
@@ -13939,14 +13939,14 @@
 			)
 		)
 		(property "Value" "FUSE_5A"
-			(at 70.0911 112.9554 0)
+			(at 70.104 113.03 0)
 			(effects
 				(font
 					(size 1.524 1.524)
 				)
 			)
 		)
-		(property "Footprint" "RobotFtpLib:RGEF300HF"
+		(property "Footprint" "footprints:RGEF500HF"
 			(at 69.0322 119.7326 0)
 			(effects
 				(font
