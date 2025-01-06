@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "RobotSymLib")(type "KiCad")(uri "/home/james/Public/Projects/MyTinyMLQuadBot/Hardware/RobotKiCadGlobalLibrary/RobotSymLibrary.kicad_sym")(options "")(descr ""))
   (lib (name "RKEF050HF")(type "KiCad")(uri "${KICAD8_SYMBOL_DIR}/RKEF050HF.kicad_sym")(options "")(descr ""))
+  (lib (name "RGEF500HF")(type "KiCad")(uri "${KICAD8_SYMBOL_DIR}/RGEF500HF.kicad_sym")(options "")(descr ""))
 )
